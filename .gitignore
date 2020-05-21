@@ -1,0 +1,10 @@
+pluggend/
+session/*
+spell/*
+tags
+.base16
+.base16.previous
+.idea/
+undodir/
+.netrwhist
+plugged/

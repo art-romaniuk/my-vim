@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if ! which nvim; then
+    sudo add-apt-repository -y ppa:neovim-ppa/stable
+    sudo apt-get -y update
+    sudo apt-get install -y neovim
+fi
+
+CURRENT_DIR=$(pwd)
+
+# Copy config file for vim
+[[ -f $HOME/.vimrc ]] || [[ -h $HOME/.vimrc ]] && mv $HOME/.vimrc $HOME/.vimrc.old
+ln -s $CURRENT_DIR/.vimrc $HOME/.vimrc
+
+# Copy config file for PhpStorm
+[[ -f $HOME/.ideavimrc ]] || [[ -h $HOME/.ideavimrc ]] && mv $HOME/.ideavimrc $HOME/.ideavimrc.old
+ln -s $CURRENT_DIR/.ideavimrc $HOME/.ideavimrc
+
+# Copy config file for neovim
+[[ -f $HOME/.config/nvim/init.vim ]] || [[ -h $HOME/.config/nvim/init.vim ]] && mv $HOME/.config/nvim/init.vim $HOME/.config/nvim/init_old.vim
+cp $CURRENT_DIR/init.vim $HOME/.config/nvim/
