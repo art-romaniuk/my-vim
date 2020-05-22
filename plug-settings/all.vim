@@ -1,32 +1,3 @@
-""""""""""""""""""""""""""""""""""""""""""""
-"                EasyAlign                 "
-""""""""""""""""""""""""""""""""""""""""""""
-" Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
-
-
-""""""""""""""""""""""""""""""""""""""""""""
-"                 NERDTree                 "
-""""""""""""""""""""""""""""""""""""""""""""
- 
-" NERDTree File highlighting
-let NERDTreeShowHidden=1
-
-""""""""""""""""""""""""""""""""""""""""""""
-"               Airline                    "
-""""""""""""""""""""""""""""""""""""""""""""
-" Vim status bar theme (airline)
-let g:airline_detect_modified=1
-let g:airline_theme='dark'
-let g:airline#extensions#fugitive#enabled   = 1
-let g:airline#extensions#syntastic#enabled  = 1
-let g:airline#extensions#bufferline#enabled = 1
-let g:airline#extensions#neomake#enabled = 1
-let airline#extensions#neomake#error_symbol = 'E:'
-let airline#extensions#neomake#warning_symbol = 'W:'
-
 
 """"""""""""""""""""""""""""""""""""""""""""
 "               Vim fzf                    "
@@ -153,18 +124,6 @@ xmap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
 omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
-
-""""""""""""""""""""""""""""""""""""""""""""
-"               Easymotion                 "
-""""""""""""""""""""""""""""""""""""""""""""
-hi link EasyMotionTarget ErrorMsg
-hi link EasyMotionShade  Comment
-
-hi link EasyMotionTarget2First MatchParen
-hi link EasyMotionTarget2Second MatchParen
-
-hi link EasyMotionMoveHL Search
-hi link EasyMotionIncSearch Search
 
 """"""""""""""""""""""""""""""""""""""""""""
 "               Vim coc (autocomplete)     "

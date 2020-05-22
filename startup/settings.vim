@@ -45,6 +45,7 @@ set shiftwidth=4
 set softtabstop=4
 
 " Persist undo between sessions
+set undofile
 set undodir=~/.dotfiles/.vim/undodir
 
 " Width of wrapped texts

@@ -42,4 +42,28 @@ Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" EasyAline
+Plug 'junegunn/vim-easy-align'
+
+" Airline status bar
+Plug 'vim-airline/vim-airline'
+
+" Autopairs
+Plug 'jiangmiao/auto-pairs'
+
+" Vim surround
+Plug 'tpope/vim-surround'
+
+" Commentary
+Plug 'tpope/vim-commentary'
+
+" Fugitive (GIT)
+Plug 'tpope/vim-fugitive'
+
+" Gitgutter (display git changes)
+Plug 'airblade/vim-gitgutter'
+
+" Vim repeate
+Plug 'tpope/vim-repeat'
+
 call plug#end()
