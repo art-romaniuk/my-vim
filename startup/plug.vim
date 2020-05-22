@@ -32,4 +32,14 @@ Plug 'pangloss/vim-javascript'
 " Color scheme
 Plug 'morhetz/gruvbox'
 
+" EasyMotion
+Plug 'easymotion/vim-easymotion'
+
+" Neerd Tree
+Plug 'preservim/nerdtree'
+
+" Fzf fuzzy finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
