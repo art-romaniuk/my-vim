@@ -2,7 +2,7 @@
 "               Vim fzf                    "
 """"""""""""""""""""""""""""""""""""""""""""
 " Map for fzf
-"nmap <Leader>. :Buffers<CR>
+nmap <Leader>. :Buffers<CR>
 nmap <Leader>t :Files<CR>
 nmap <Leader>r :Tags<CR>
 nmap <Leader>L :Lines<CR>

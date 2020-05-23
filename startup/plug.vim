@@ -66,4 +66,7 @@ Plug 'airblade/vim-gitgutter'
 " Vim repeate
 Plug 'tpope/vim-repeat'
 
+" Change history preview plugin
+Plug 'mbbill/undotree'
+
 call plug#end()
