@@ -64,9 +64,9 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> rr <Plug>(coc-rename)
+nmap <silent><space> gi <Plug>(coc-implementation)
+nmap <silent><space> gr <Plug>(coc-references)
+nmap <silent><space> rr <Plug>(coc-rename)
 nnoremap <leader>cr :CocRestart
 
 " Use K to show documentation in preview window.

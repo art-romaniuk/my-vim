@@ -45,7 +45,7 @@ nnoremap <silent> <leader>V :source ~/.vimrc<cr>:filetype detect<cr>:exe ":echo 
 nmap zk O<ESC>j
 nmap zj o<ESC>k
 
-map <Leader>q :q<CR>
+map <silent><Leader>q :q<CR>
 map <Leader><Leader>q :qall!<CR>
 map <Leader>w :w<CR>
 
@@ -53,9 +53,9 @@ nnoremap <silent> j j:redraw<CR>
 nnoremap <silent> k k:redraw<CR>
 
 " save sesson to file
-nnoremap <Leader><C-k> :mks! ~/.dotfiles/.vim/session/sess.vim<cr>
+nnoremap <Leader><C-s> :mks! ~/.dotfiles/.vim/session/sess.vim<cr>
 " restore sesion from file
-nnoremap <Leader><C-l> :so ~/.dotfiles/.vim/session/sess.vim<cr>
+nnoremap <Leader><C-r> :so ~/.dotfiles/.vim/session/sess.vim<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""
 "               Vim php-namespace          "
