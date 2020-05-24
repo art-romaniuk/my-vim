@@ -29,6 +29,10 @@ Plug 'chr4/nginx.vim'
 " JavaScript highlight
 Plug 'pangloss/vim-javascript'
 
+" TypeScript highlight
+Plug 'leafgarland/typescript-vim'
+Plug 'ianks/vim-tsx'
+
 " Color scheme
 Plug 'morhetz/gruvbox'
 
@@ -68,5 +72,8 @@ Plug 'tpope/vim-repeat'
 
 " Change history preview plugin
 Plug 'mbbill/undotree'
+
+" Directory plugin
+Plug 'justinmk/vim-dirvish'
 
 call plug#end()
