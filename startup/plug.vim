@@ -18,8 +18,6 @@ Plug 'w0rp/ale'
 " Color scheme
 Plug 'rainglow/vim'
 
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-
 " Coc vim autocompition
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
