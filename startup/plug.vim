@@ -74,4 +74,7 @@ Plug 'mbbill/undotree'
 " Directory plugin
 Plug 'justinmk/vim-dirvish'
 
+" Twig plugin
+Plug 'lumiliet/vim-twig'
+
 call plug#end()

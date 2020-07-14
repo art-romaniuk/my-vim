@@ -135,6 +135,18 @@ nnoremap \d :action DebugClass<cr>
 nnoremap \D :action Debug<cr>
 nnoremap \c :action CheckStyleCurrentFileAction<cr>
 
+" Xdebug
+" Map \r to the Reformat Code action
+:map \r :action ReformatCode<cr>
+" Map \d to start debug
+:map \d :action Debug<cr>
+
+" Map \b to toggle the breakpoint on the current line
+:map \b :action ToggleLineBreakpoint<cr>
+
+" Optimize use class imports
+:map \i :action OptimizeImports<cr>
+
 " code refactoring
 nnoremap <space>rr :action RenameElement<cr>
 
