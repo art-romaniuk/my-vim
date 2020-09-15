@@ -45,9 +45,9 @@ nnoremap <silent> <leader>V :source ~/.vimrc<cr>:filetype detect<cr>:exe ":echo 
 nmap zk O<ESC>j
 nmap zj o<ESC>k
 
-map <silent><Leader>q :q<CR>
-map <Leader><Leader>q :qall!<CR>
-map <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader><Leader>q :qall!<CR>
+nnoremap <Leader>w :w<CR>
 
 nnoremap <silent> j j:redraw<CR>
 nnoremap <silent> k k:redraw<CR>

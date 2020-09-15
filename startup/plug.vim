@@ -77,4 +77,7 @@ Plug 'justinmk/vim-dirvish'
 " Twig plugin
 Plug 'lumiliet/vim-twig'
 
+" Yank highlight
+Plug 'machakann/vim-highlightedyank'
+
 call plug#end()
