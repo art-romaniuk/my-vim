@@ -59,9 +59,6 @@ Plug 'tpope/vim-commentary'
 " Fugitive (GIT)
 Plug 'tpope/vim-fugitive'
 
-" Gitgutter (display git changes)
-" Plug 'airblade/vim-gitgutter'
-
 " Vim repeate
 Plug 'tpope/vim-repeat'
 
