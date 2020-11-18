@@ -21,4 +21,3 @@ hi link EasyMotionTarget2Second MatchParen
 
 hi link EasyMotionMoveHL Search
 hi link EasyMotionIncSearch Search
-

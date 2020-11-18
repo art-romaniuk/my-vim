@@ -21,18 +21,15 @@ Plug 'rainglow/vim'
 " Coc vim autocompition
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Nginx
-Plug 'chr4/nginx.vim'
-
-" JavaScript highlight
-Plug 'pangloss/vim-javascript'
-
-" TypeScript highlight
-Plug 'leafgarland/typescript-vim'
-Plug 'ianks/vim-tsx'
+" Color scheme
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'joshdick/onedark.vim'
 
 " Color scheme
 Plug 'morhetz/gruvbox'
+
+" Syntax highlight
+Plug 'sheerun/vim-polyglot'
 
 " EasyMotion
 Plug 'easymotion/vim-easymotion'
@@ -63,7 +60,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 
 " Gitgutter (display git changes)
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
 
 " Vim repeate
 Plug 'tpope/vim-repeat'
@@ -79,5 +76,20 @@ Plug 'lumiliet/vim-twig'
 
 " Yank highlight
 Plug 'machakann/vim-highlightedyank'
+
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" Track the engine.
+Plug 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
+
+" Analog to gitgutter
+if has('nvim') || has('patch-8.0.902')
+  Plug 'mhinz/vim-signify'
+else
+  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+endif
 
 call plug#end()

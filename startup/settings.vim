@@ -7,9 +7,21 @@ endif
 let g:LoupeCenterResults=0
 
 " Colorscheme
-autocmd vimenter * colorscheme gruvbox
-set background=dark
-let g:gruvbox_contrast_dark='hard'
+set cursorline
+
+" This code must be before colorscheme
+let g:onedark_termcolors=256
+let g:onedark_terminal_italics=1
+let g:onedark_color_overrides = {
+\ "black": {"gui": "#23282d", "cterm": "235", "cterm16": "0" },
+\ "purple": { "gui": "#C678DF", "cterm": "170", "cterm16": "5" },
+\}
+autocmd ColorScheme * call onedark#extend_highlight("Function", { "gui": "bold" })
+autocmd ColorScheme * call onedark#extend_highlight("Conditional", { "gui": "bold" })
+autocmd ColorScheme * call onedark#extend_highlight("Exception", { "gui": "bold" })
+
+colorscheme onedark
+
 
 " Display line numbers
 set number

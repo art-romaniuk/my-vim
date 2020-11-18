@@ -9,3 +9,6 @@ autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 noexpandtab
 
 " Disable auto-comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Check if buffer has been changed outside vim
+au CursorHold * checktime  
