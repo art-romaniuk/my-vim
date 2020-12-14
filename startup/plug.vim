@@ -20,7 +20,6 @@ Plug 'rainglow/vim'
 
 " Coc vim autocompition
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 " Color scheme
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'joshdick/onedark.vim'
@@ -81,6 +80,12 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
+
+" Smoth scrolling
+Plug 'psliwka/vim-smoothie'
+
+" Vin notes
+Plug 'vimwiki/vimwiki'
 
 " Analog to gitgutter
 if has('nvim') || has('patch-8.0.902')

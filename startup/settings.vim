@@ -9,19 +9,9 @@ let g:LoupeCenterResults=0
 " Colorscheme
 set cursorline
 
-" This code must be before colorscheme
-let g:onedark_termcolors=256
-let g:onedark_terminal_italics=1
-let g:onedark_color_overrides = {
-\ "black": {"gui": "#23282d", "cterm": "235", "cterm16": "0" },
-\ "purple": { "gui": "#C678DF", "cterm": "170", "cterm16": "5" },
-\}
-autocmd ColorScheme * call onedark#extend_highlight("Function", { "gui": "bold" })
-autocmd ColorScheme * call onedark#extend_highlight("Conditional", { "gui": "bold" })
-autocmd ColorScheme * call onedark#extend_highlight("Exception", { "gui": "bold" })
-
-colorscheme onedark
-
+" Colorscheme
+autocmd vimenter * colorscheme gruvbox
+set background=dark
 
 " Display line numbers
 set number
@@ -90,6 +80,14 @@ filetype off
 
 " Disable automatic comment insertion
 set formatoptions-=cro  
+
+" The Fix for Slow Scrolling in VIM
+" set re=1
+" set lazyredraw
+" set ttyfast
+set regexpengine=1
+" set synmaxcol=200
+" syntax sync minlines=256
 
 " Break symbol
 set showbreak=⤥\ 

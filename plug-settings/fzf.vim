@@ -24,6 +24,7 @@ imap <c-x><c-l> <plug>(fzf-complete-buffer-line)
 
 " Save search history
 let g:fzf_history_dir = '~/.local/share/fzf-history'
+let g:fzf_preview_window = ['down:50%', 'ctrl-/']
 
 " Allow passing an optional flags to the Rg command
 " Example: :Rg search_text -g '*.md'
@@ -31,3 +32,8 @@ command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --follow --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
   \   fzf#vim#with_preview(), <bang>0)
+
+command! -bang -nargs=? -complete=dir Buffers
+    \ call fzf#vim#buffers(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--no-preview']}, <bang>0)
+
+let g:DisableAutoPHPFolding = 1
