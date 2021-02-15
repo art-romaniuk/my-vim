@@ -10,8 +10,10 @@ let g:LoupeCenterResults=0
 set cursorline
 
 " Colorscheme
-autocmd vimenter * colorscheme gruvbox
+" autocmd vimenter * colorscheme gruvbox
 set background=dark
+" autocmd vimenter * colorscheme palenight
+autocmd vimenter * colorscheme onehalfdark
 
 " Display line numbers
 set number
@@ -136,6 +138,9 @@ set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:Cursor,sm:block
 
 " Add fzf to runtime path for execution
 set rtp+=/Users/coffeeman/homebrew/opt/fzf
+
+" Add Tabnine
+set rtp+=$HOME/.dotfiles/vim/plugged/tabnine-vim/
 
 " Redecalre style for hlsearch
 autocmd VimEnter * hi Search        guifg=#Cd3f45 guibg=NONE gui=underline,bold
