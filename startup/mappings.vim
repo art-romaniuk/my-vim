@@ -14,6 +14,7 @@ nnoremap <Leader><Leader>r zR<CR>
 
 " Rg search 
 nnoremap <Leader>/ :Rg<CR>
+nnoremap <Leader><Leader>/ :Ag<CR>
 
 " Splits movements
 nnoremap <C-J> <C-W><C-J>
@@ -47,7 +48,7 @@ nmap zj o<ESC>k
 
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader><Leader>q :qall!<CR>
-nnoremap <Leader>w :w<CR>
+nnoremap <Leader><Leader>w :w<CR>
 
 nnoremap <silent> j j:redraw<CR>
 nnoremap <silent> k k:redraw<CR>

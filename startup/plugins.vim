@@ -6,8 +6,11 @@ runtime plug-settings/fzf.vim
 runtime plug-settings/neerd_tree.vim
 runtime plug-settings/undotree.vim
 runtime plug-settings/text_yank_post.vim
-runtime plug-settings/onedar.vim
+runtime plug-settings/onedark.vim
 runtime plug-settings/gruvebox.vim
 runtime plug-settings/ulti_snips.vim
 runtime plug-settings/signify.vim
 runtime plug-settings/vim_go.vim
+runtime plug-settings/vimwiki.vim
+runtime plug-settings/pipeline.vim
+runtime plug-settings/hop.vim

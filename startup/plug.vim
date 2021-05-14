@@ -34,6 +34,9 @@ Plug 'sheerun/vim-polyglot'
 
 " EasyMotion
 Plug 'easymotion/vim-easymotion'
+"
+" EasyMotion like
+" Plug 'phaazon/hop.nvim'
 
 " Neerd Tree
 Plug 'preservim/nerdtree'
@@ -59,6 +62,9 @@ Plug 'tpope/vim-commentary'
 
 " Fugitive (GIT)
 Plug 'tpope/vim-fugitive'
+
+" Git diff view
+Plug 'sindrets/diffview.nvim'
 
 " Vim repeate
 Plug 'tpope/vim-repeat'
@@ -90,7 +96,10 @@ Plug 'wellle/targets.vim'
 Plug 'codota/tabnine-vim'
 
 " Vin notes
-" Plug 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki'
+
+" For Tmux status
+Plug 'vimpostor/vim-tpipeline'
 
 " Analog to gitgutter
 if has('nvim') || has('patch-8.0.902')

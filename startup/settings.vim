@@ -13,7 +13,8 @@ set cursorline
 " autocmd vimenter * colorscheme gruvbox
 set background=dark
 " autocmd vimenter * colorscheme palenight
-autocmd vimenter * colorscheme onehalfdark
+" autocmd vimenter * colorscheme onehalfdark
+autocmd vimenter * colorscheme onedark
 
 " Display line numbers
 set number
@@ -50,7 +51,8 @@ set softtabstop=4
 
 " Persist undo between sessions
 set undofile
-set undodir=~/.dotfiles/.vim/undodir
+" TODO settings line bellow does not work animore (should find out why)
+" set undodir=~/.dotfiles/.vim/undodir/
 
 " Width of wrapped texts
 set tw=120
