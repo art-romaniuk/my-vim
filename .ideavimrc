@@ -182,3 +182,10 @@ nnoremap g/ /
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 cnoremap <A-d> :action EditorPageDown<cr>
+
+" emulate commands combinations ci' and di' using cq and dq.
+onoremap q i'
+onoremap Q i"
+
+onoremap q i'
+onoremap Q i"

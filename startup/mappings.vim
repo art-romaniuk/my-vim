@@ -66,7 +66,7 @@ function! IPhpInsertUse()
     call PhpInsertUse()
     call feedkeys('a',  'n')
 endfunction
-autocmd FileType php noremap <Leader>i :call PhpInsertUse()<CR>
+autocmd FileType php "noremap" <Leader>i :call PhpInsertUse()<CR>
 
 autocmd FileType php noremap <Leader><Leader>s :call PhpSortUse()<CR>
 noremap <Leader>i :call PhpInsertUse()<CR>
@@ -97,7 +97,10 @@ nnoremap <S-j> :m+<CR>
 
 " surround by quotes - frequently use cases of vim-surround
 map <Leader>" ysiw"<cr>
-map <Leader>' ysiw '<cr>
+map <Leader>' ysiw'<cr>
+" emulate commands combinations ci' and di' using cq and dq.
+onoremap q i'
+onoremap Q i"
 
 " Keep the cursor in place while joining lines
 nnoremap J mzJ`z
