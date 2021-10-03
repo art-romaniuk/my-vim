@@ -72,6 +72,9 @@ Plug 'tpope/vim-repeat'
 " Change history preview plugin
 Plug 'mbbill/undotree'
 
+" Code inspection plugin
+Plug 'pechorin/any-jump.vim'
+
 " Directory plugin
 Plug 'justinmk/vim-dirvish'
 
@@ -82,7 +85,7 @@ Plug 'lumiliet/vim-twig'
 Plug 'machakann/vim-highlightedyank'
 
 " Go
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', {  'tag': 'v1.22', 'do': ':GoUpdateBinaries' }
 
 " Track the engine.
 Plug 'SirVer/ultisnips'
@@ -92,14 +95,17 @@ Plug 'honza/vim-snippets'
 " Extended text object
 Plug 'wellle/targets.vim'
 
-" Autocomplition plugin AI
-Plug 'codota/tabnine-vim'
-
 " Vin notes
 Plug 'vimwiki/vimwiki'
 
-" For Tmux status
-Plug 'vimpostor/vim-tpipeline'
+" PlantUML
+Plug 'aklt/plantuml-syntax'
+Plug 'tyru/open-browser.vim'
+Plug 'weirongxu/plantuml-previewer.vim'
+
+" Search preview plugins
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'nvim-telescope/telescope.nvim'
 
 " Analog to gitgutter
 if has('nvim') || has('patch-8.0.902')

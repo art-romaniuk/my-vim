@@ -141,9 +141,6 @@ set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:Cursor,sm:block
 " Add fzf to runtime path for execution
 set rtp+=/Users/coffeeman/homebrew/opt/fzf
 
-" Add Tabnine
-set rtp+=$HOME/.dotfiles/vim/plugged/tabnine-vim/
-
 " Redecalre style for hlsearch
 autocmd VimEnter * hi Search        guifg=#Cd3f45 guibg=NONE gui=underline,bold
 

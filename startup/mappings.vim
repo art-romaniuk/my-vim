@@ -108,4 +108,5 @@ nnoremap J mzJ`z
 " Re-save file sith sudo
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
-
+" Open terminal
+nnoremap <Leader><Leader>t :vsplit term://zsh<cr>
