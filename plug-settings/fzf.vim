@@ -26,6 +26,8 @@ imap <c-x><c-l> <plug>(fzf-complete-buffer-line)
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 let g:fzf_preview_window = ['down:80%', 'ctrl-/']
 
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
+
 " Allow passing an optional flags to the Rg command
 " Example: :Rg search_text -g '*.md'
 command! -bang -nargs=* Rg
