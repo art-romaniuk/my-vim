@@ -1,5 +1,7 @@
+runtime plug-settings/spelunker.vim
 runtime plug-settings/airline.vim
 runtime plug-settings/coc.vim
+runtime plug-settings/coc-fzf.vim
 runtime plug-settings/easy_align.vim
 runtime plug-settings/easy_motion.vim
 runtime plug-settings/fzf.vim

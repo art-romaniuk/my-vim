@@ -44,6 +44,8 @@ Plug 'preservim/nerdtree'
 " Fzf fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+" Preview for coc actions
+Plug 'antoinemadec/coc-fzf'
 
 " EasyAline
 Plug 'junegunn/vim-easy-align'
@@ -95,13 +97,16 @@ Plug 'honza/vim-snippets'
 " Extended text object
 Plug 'wellle/targets.vim'
 
-" Vin notes
+" Vim notes
 Plug 'vimwiki/vimwiki'
 
 " PlantUML
 Plug 'aklt/plantuml-syntax'
 Plug 'tyru/open-browser.vim'
 Plug 'weirongxu/plantuml-previewer.vim'
+
+" Spell check plugin
+Plug 'kamykn/spelunker.vim'
 
 " Search preview plugins
 " Plug 'nvim-lua/plenary.nvim'

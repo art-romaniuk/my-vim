@@ -9,6 +9,9 @@ let g:LoupeCenterResults=0
 " Colorscheme
 set cursorline
 
+" Default shell for built in terminal
+set shell=/usr/local/bin/zsh
+
 " Colorscheme
 " autocmd vimenter * colorscheme gruvbox
 set background=dark
@@ -24,7 +27,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-" Anable mouse in normal and visual modes
+" Enable mouse in normal and visual modes
 set mouse=nv
 
 " Highlight search word
@@ -33,11 +36,14 @@ set relativenumber
 
 " Be iMproved, required
 set nocompatible
-set shell=sh
 set timeoutlen=3000
 set updatetime=100
 
-" Turrn off .swp file creation
+" Change the direction of new splits
+set splitbelow
+set splitright
+
+" Turn off .swp file creation
 set noswapfile
 
 " Use soft tab stop spaces instead of tab characters for indentation
@@ -51,7 +57,7 @@ set softtabstop=4
 
 " Persist undo between sessions
 set undofile
-" TODO settings line bellow does not work animore (should find out why)
+" TODO settings line bellow does not work anymore (should find out why)
 " set undodir=~/.dotfiles/.vim/undodir/
 
 " Width of wrapped texts
@@ -77,7 +83,8 @@ set path+=**
 set wildmenu
 
 " Spell checking
-set spelllang=en_us
+set spelllang=en
+set spellfile=$HOME/.dotfiles/.vim/spell/en.utf-8.add
 
 " Required
 filetype off
