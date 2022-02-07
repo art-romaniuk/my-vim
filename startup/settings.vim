@@ -14,10 +14,11 @@ set shell=/usr/local/bin/zsh
 
 " Colorscheme
 " autocmd vimenter * colorscheme gruvbox
-set background=dark
 " autocmd vimenter * colorscheme palenight
 " autocmd vimenter * colorscheme onehalfdark
-autocmd vimenter * colorscheme onedark
+colorscheme onedark
+" set background=dark
+" autocmd vimenter * colorscheme dracula
 
 " Display line numbers
 set number
@@ -26,6 +27,10 @@ set autoread
 set tabstop=4 
 set shiftwidth=4
 set expandtab
+
+" Make copy to clipboard
+set clipboard=unnamedplus
+set confirm
 
 " Enable mouse in normal and visual modes
 set mouse=nv
@@ -72,6 +77,10 @@ set autoindent
 
 " Automatically inserts indentation in some cases
 set smartindent
+
+" Seach by using lower and upper case
+set ignorecase
+set smartcase
 
 " Like smart indent, but stricter and more customisable
 set cindent
