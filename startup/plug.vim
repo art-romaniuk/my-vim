@@ -123,6 +123,9 @@ Plug 'kamykn/spelunker.vim'
 " Markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
+" Find and replace occurrence in many files
+Plug 'pelodelfuego/vim-swoop'
+
 " Analog to gitgutter
 if has('nvim') || has('patch-8.0.902')
   Plug 'mhinz/vim-signify'
