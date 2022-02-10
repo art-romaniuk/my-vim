@@ -23,6 +23,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Color scheme
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'joshdick/onedark.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Color scheme
 Plug 'morhetz/gruvbox'
@@ -38,8 +39,22 @@ Plug 'easymotion/vim-easymotion'
 " EasyMotion like
 " Plug 'phaazon/hop.nvim'
 
+" For refactoring
+Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'}
+
+" A collection of language packs for Vim.
+Plug 'sheerun/vim-polyglot'
+
+" Languagee sysntax highlight
+Plug 'sheerun/vim-polyglot'
+
+" Terminal inside vim
+Plug 'voldikss/vim-floaterm'
+
 " Neerd Tree
 Plug 'preservim/nerdtree'
+" Marks changed files
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Fzf fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -64,9 +79,6 @@ Plug 'tpope/vim-commentary'
 
 " Fugitive (GIT)
 Plug 'tpope/vim-fugitive'
-
-" Git diff view
-Plug 'sindrets/diffview.nvim'
 
 " Vim repeate
 Plug 'tpope/vim-repeat'
@@ -108,9 +120,8 @@ Plug 'weirongxu/plantuml-previewer.vim'
 " Spell check plugin
 Plug 'kamykn/spelunker.vim'
 
-" Search preview plugins
-" Plug 'nvim-lua/plenary.nvim'
-" Plug 'nvim-telescope/telescope.nvim'
+" Markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " Analog to gitgutter
 if has('nvim') || has('patch-8.0.902')

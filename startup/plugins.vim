@@ -16,4 +16,4 @@ runtime plug-settings/vim_go.vim
 runtime plug-settings/vimwiki.vim
 runtime plug-settings/hop.vim
 runtime plug-settings/dirvish.vim
-runtime plug-settings/php.vim
+runtime plug-settings/phpactor.vim
