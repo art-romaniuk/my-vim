@@ -13,7 +13,7 @@ nmap <Leader>l <Plug>(easymotion-overwin-line)
 map  <Leader>; <Plug>(easymotion-bd-w)
 nmap <Leader>; <Plug>(easymotion-overwin-w)
 
-hi link EasyMotionTarget ErrorMsg
+hi link EasyMotionTarget Search
 hi link EasyMotionShade  Comment
 
 hi link EasyMotionTarget2First MatchParen
