@@ -1,6 +1,10 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
 set clipboard+=unnamed
+set clipboard+=ideaput
 set hlsearch
-set scrolloff=3
+set scrolloff=5
 set showmode
 set history=1000
 set surround
