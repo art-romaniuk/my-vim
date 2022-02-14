@@ -17,3 +17,4 @@ runtime plug-settings/vimwiki.vim
 runtime plug-settings/hop.vim
 runtime plug-settings/dirvish.vim
 runtime plug-settings/phpactor.vim
+runtime plug-settings/swoop.vim

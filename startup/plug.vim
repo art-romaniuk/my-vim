@@ -25,11 +25,6 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'joshdick/onedark.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
-" Color scheme
-Plug 'morhetz/gruvbox'
-Plug 'drewtempelmeyer/palenight.vim'
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
-
 " Syntax highlight
 Plug 'sheerun/vim-polyglot'
 
