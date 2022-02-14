@@ -95,7 +95,7 @@ endfunction
 autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
 
 autocmd FileType php noremap <Leader><Leader>s :call PhpSortUse()<CR>
-noremap <Leader>u :call PhpInsertUse()<CR>
+noremap <Leader><Leader>e :call PhpInsertUse()<CR>
 
 
 " Then, hitting `\e` in normal or insert mode will expand the name to a fully qualified name.
@@ -103,10 +103,9 @@ function! IPhpExpandClass()
     call PhpExpandClass()
     call feedkeys('a', 'n')
 endfunction
-autocmd FileType php noremap <Leader><Leader>e :call PhpExpandClass()<CR>
+" autocmd FileType php noremap <Leader><Leader>e :call PhpExpandClass()<CR>
 
 let g:php_namespace_sort = "'{,'}-1!awk '{print length, $0}' | sort -n -s | cut -d' ' -f2-"
-let g:php_namespace_sort_after_insert = 1
 set tags+=tags,tags.vendors
 
 """"""""""""""""""""""""""""""""""""""""""""
