@@ -167,3 +167,5 @@ autocmd VimEnter * hi Search        guifg=#Cd3f45 guibg=NONE gui=underline,bold
 
 " JavaScript
 let g:javascript_plugin_flow = 1
+
+hi! VertSplit guifg=black guibg=black ctermfg=black ctermbg=black
