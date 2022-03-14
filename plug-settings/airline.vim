@@ -12,3 +12,4 @@ let airline#extensions#neomake#error_symbol = 'E:'
 let airline#extensions#neomake#warning_symbol = 'W:'
 let g:airline_powerline_fonts = 1
 let g:airline_section_c = '%F'
+let g:airline#extensions#tabline#enabled = 0
