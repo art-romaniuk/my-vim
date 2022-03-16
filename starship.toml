@@ -1,0 +1,7 @@
+[kubernetes]
+style = "bold #2b6fe5"
+disabled = false
+
+[php]
+format = "via [?? $version](147 bold) "
+disabled = false
