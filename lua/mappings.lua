@@ -18,18 +18,14 @@ map('n', '<Leader><Leader>f', 'zM<CR>', default_opts)
 map('n', '<Leader><Leader>r', 'zR<CR>', default_opts)
 
 --  Rg search 
-map('n', '<Leader>/', ':Rg<CR>', default_opts)
-map('n', '<Leader><Leader>/', ':Ag<CR>', default_opts)
+map('n', '<Leader>/', ':Rg<CR>\'', default_opts)
+map('n', '<Leader><Leader>/', ':Ag<CR>\'', default_opts)
 
 --  Splits movements
 map('n', '<C-J>', '<C-W><C-J>', default_opts)
 map('n', '<C-K>', '<C-W><C-K>', default_opts)
 map('n', '<C-L>', '<C-W><C-L>', default_opts)
 map('n', '<C-H>', '<C-W><C-H>', default_opts)
-
---  Move slected up/down
-map('v', 'J', ':m \'>+1<cr>gv=gv', default_opts)
-map('v', 'K', ':m \'>-2<cr>gv=gv', default_opts)
 
 --  Copy paste form PRIMARY and CLIPBOARD
 map('n', '<Leader>y', '"*y', default_opts)
@@ -43,9 +39,6 @@ map('n', '<Leader>P', '"+p', default_opts)
 
 --  Open .vimrc in new tab
 map('n', '<Leader>v', ':tabedit $MYVIMRC<CR>', default_opts)
-
---  Reload config file
-map('n', '<Leader>V', ':source ~/.vimrc<cr>:filetype detect<cr>:exe ":echo \'vimrc reloaded\'"<CR>', default_opts)
 
 --  Line editing (add empty line above and bellow)
 map('n', 'zk', 'O<ESC>j', default_opts)
@@ -77,17 +70,9 @@ map('n', '<Leader><C-r>', ':so ~/.dotfiles/.vim/session/sess.vim<CR>', default_o
 -- autocmd FileType php noremap <Leader><Leader>s :call PhpSortUse()<CR>
 -- noremap <Leader>i :call PhpInsertUse()<CR>
 
-
 --  Search word under cursor
 map('n', '<Leader>d', ':call fzf#vim#tags(expand(\'<cword>\'), {\'options\': \'--exact --select-1 --exit-0\'})<CR>', default_opts)
 -- nnoremap <leader>d :call fzf#vim#tags(expand('<cword>'), {'options': '--exact --select-1 --exit-0'})<CR>
-
--- Folding
-map('n', '<S-Tab>', 'za', default_opts)
-
--- Move line up and down
-map('n', '<S-k>', ':m-2<CR>', default_opts)
-map('n', '<S-j>', ':m+2<CR>', default_opts)
 
 -- Surround by quotes - frequently use cases of vim-surround
 map('', '<Leader>"', 'ysiw"<CR>', default_opts)

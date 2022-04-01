@@ -4,4 +4,6 @@ if not ok then
 end
 
 require "lsp.lsp-installer"
--- require("lsp.lsp-handlers").setup()
+-- require("lsp.handlers").setup()
+-- require "lsp.cmp"
+-- require'lspconfig'.pyright.setup{}

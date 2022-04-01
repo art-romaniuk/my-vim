@@ -3,6 +3,7 @@ local default_opts = {noremap = true, silent = true}
 
 map('n', '<leader>gd', ':SignifyDiff<cr>', default_opts)
 map('n', '<leader>gp', ':SignifyHunkDiff<cr>', default_opts)
+
 map('n', '<leader>gu', ':SignifyHunkUndo<cr>', default_opts)
 
 -- Hunk jumping

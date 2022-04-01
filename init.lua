@@ -1,1 +1,21 @@
-require 'autoload'
+require("plugins")
+require("mappings")
+require("plugins/onedark")
+require("settings")
+require("autocommands")
+require("dirvish")
+require("functions")
+
+require("lsp")
+
+require("plugins/neerd_tree")
+require("plugins/fzf")
+require("plugins/easy_motion")
+require("plugins/phpactor")
+require("plugins/lualine")
+require("plugins/fzf")
+require("plugins/signify")
+require("plugins/vim_go")
+require("plugins/ulti_snips")
+require("plugins/spelunker")
+require("plugins/telescope")

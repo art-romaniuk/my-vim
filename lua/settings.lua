@@ -2,7 +2,7 @@ local cmd = vim.cmd
 local opt = vim.opt
 local g = vim.g
 
--- Stark highlighting is enough to see the current match; don't need the
+-- Stark highlighting is enough to see the current match; don"t need the
 -- centering, which can be annoying.
 g.LoupeCenterResults = false
 
@@ -11,17 +11,17 @@ g.highlightedyank_highlight_duration = 200
 -- Colorscheme
 opt.cursorline = true
 
-opt.encoding = 'UTF-8'
+opt.encoding = "UTF-8"
 
 -- Default shell for built in terminal
-opt.shell = '/usr/local/bin/fish'
+opt.shell = "/usr/local/bin/fish"
 
 -- Colorscheme
 -- autocmd vimenter * colorscheme gruvbox
 -- autocmd vimenter * colorscheme palenight
 -- autocmd vimenter * colorscheme onehalfdark
 -- autocmd vimenter * colorscheme dracula
-cmd('colorscheme onedark')
+cmd("colorscheme onedark")
 -- opt.background = dark
 
 -- Display line numbers
@@ -34,11 +34,11 @@ opt.shiftwidth = 4
 opt.expandtab = true
 
 -- Make copy to clipboard
-opt.clipboard = 'unnamedplus'
+opt.clipboard = "unnamedplus"
 opt.confirm = true
 
 -- Enable mouse in normal and visual modes
-opt.mouse = 'nv'
+opt.mouse = "nv"
 
 -- Highlight search word
 opt.relativenumber = true
@@ -72,7 +72,7 @@ opt.tw = 120
 
 -- Display a separate line at the end of columns
 opt.termguicolors = true
-opt.colorcolumn = ''
+opt.colorcolumn = ""
 
 -- Keep indentation from previous line
 opt.autoindent = true
@@ -88,17 +88,17 @@ opt.smartcase = true
 opt.cindent = true
 
 -- Search down into sub folders Provides tab-completion
-opt.path = vim.opt.path + '.,**'
+opt.path = opt.path + ".,**"
 
 -- Display all matching files when we tab complete
 opt.wildmenu = true
 
 -- Spell checking
-opt.spelllang = 'en'
+opt.spelllang = "en"
 opt.spellfile = os.getenv("HOME") .. "/.dotfiles/.vim/spell/en.utf-8.add"
 
 -- Required
-cmd('filetype off')
+cmd("filetype off")
 
 -- Disable automatic comment insertion
 opt.formatoptions = { t = true, c = false, r = true, o = true }
@@ -112,12 +112,12 @@ opt.regexpengine = 1
 -- syntax sync minlines=256
 
 -- Break symbol
-opt.showbreak = '⤥' 
+opt.showbreak = "⤥" 
 
 -- Automatic, language-dependent indentation, syntax coloring and other
 -- functionality.
-cmd('filetype indent plugin on')
-cmd('syntax on')
+cmd("filetype indent plugin on")
+cmd("syntax on")
 
 
 -- todo Not compoeted
@@ -132,15 +132,15 @@ cmd('syntax on')
 -- let &t_EI .= "\<Esc>[1 q"
 
 -- -- Folding
--- if has('folding')
---     if has('windows')
---         let &fillchars='vert: '         -- less cluttered vertical window separators
+-- if has("folding")
+--     if has("windows")
+--         let &fillchars="vert: "         -- less cluttered vertical window separators
 --     endif
 --     opt.foldmethod=indent               -- not as cool as syntax, but faster
 --     opt.foldlevelstart=99               -- start unfolded
 -- endif
 
--- if v:version > 703 || v:version == 703 && has('patch541')
+-- if v:version > 703 || v:version == 703 && has("patch541")
 --     opt.formatoptions+=j                -- remove comment leader when joining comment lines
 -- endif
 
@@ -167,7 +167,7 @@ vim.cmd([[
 -- Add fzf to runtime path for execution
 -- opt.rtp+=/Users/coffeeman/homebrew/opt/fzf
 
--- Redecalre style for hlsearch (it's an old values)
+-- Redecalre style for hlsearch (it"s an old values)
 -- autocmd VimEnter * hi Search guifg=#Cd3f45 guibg=green gui=underline,bold
 vim.cmd([[
   autocmd VimEnter * hi Search gui=underline,bold

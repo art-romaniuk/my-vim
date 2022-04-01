@@ -1,0 +1,6 @@
+1. Any-jump plugin doesn't work for PHP files;
+2. Go to declaration doesn't work for PHP files;
+3. Find out and install the plugin for replacement.
+
+Plugins to install
+1. Find and replace https://github.com/nvim-pack/nvim-spectre
