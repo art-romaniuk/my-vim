@@ -23,3 +23,9 @@ vim.cmd([[
   hi link EasyMotionMoveHL Search
   hi link EasyMotionIncSearch Search
 ]])
+
+-- Disable lsp systax error highlighting when using the motions
+vim.cmd([[
+  autocmd User EasyMotionPromptBegin silent! CocDisable
+  autocmd User EasyMotionPromptEnd silent! CocEnable
+]])

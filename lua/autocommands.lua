@@ -23,7 +23,6 @@ vim.cmd([[
   endif
 ]])
 
-
 -- Set type for typescript files
 vim.cmd([[
   au BufNewFile,BufRead *.ts setlocal filetype = typescript
