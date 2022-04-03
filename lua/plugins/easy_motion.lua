@@ -3,7 +3,6 @@ vim.g.EasyMotion_startofline = 0
 -- EasyMotion work similarly to Vim's smartcase
 vim.g.EasyMotion_smartcase = 1
 
-
 vim.cmd([[
   map  <Leader>f <Plug>(easymotion-bd-f)
   nmap <Leader>f <Plug>(easymotion-overwin-f)
@@ -24,8 +23,8 @@ vim.cmd([[
   hi link EasyMotionIncSearch Search
 ]])
 
--- Disable lsp systax error highlighting when using the motions
+-- Disable lsp syntax error highlighting when using the motions
 vim.cmd([[
-  autocmd User EasyMotionPromptBegin silent! CocDisable
-  autocmd User EasyMotionPromptEnd silent! CocEnable
+  autocmd User EasyMotionPromptBegin silent! LspStop
+  autocmd User EasyMotionPromptEnd silent! LspStart
 ]])
