@@ -16,13 +16,10 @@ return require("packer").startup(function()
     -- use {"neoclide/coc.nvim", branch = "release"}
     -- Color scheme
     -- use "joshdick/onedark.vim"
-    use "ii14/onedark.nvim" 
+    use "ii14/onedark.nvim"
 
     -- EasyMotion
     use "easymotion/vim-easymotion"
-    --
-    -- EasyMotion like
-    -- use "phaazon/hop.nvim"
 
     -- For refactoring
     -- use "phpactor/phpactor", {"for": "php", "branch": "master", "do": "composer install --no-dev -o"}
@@ -65,7 +62,7 @@ return require("packer").startup(function()
 
     -- Fugitive (GIT)
     use "tpope/vim-fugitive"
-    use "airblade/vim-gitgutter" 
+    use "airblade/vim-gitgutter"
 
     -- Vim repeate
     use "tpope/vim-repeat"
@@ -86,7 +83,7 @@ return require("packer").startup(function()
     use "machakann/vim-highlightedyank"
 
     -- Go
-    use { "fatih/vim-go",  tag = "v1.22", run = ":GoUpdateBinaries" }
+    use { "fatih/vim-go",  run = ":GoUpdateBinaries" }
 
     -- Track the engine.
     use "SirVer/ultisnips"
@@ -107,7 +104,10 @@ return require("packer").startup(function()
     -- Language highlights
     use {
         'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
+        run = ':TSUpdate',
+        requires = {
+            { 'nvim-treesitter/nvim-treesitter-textobjects' }
+        }
     }
 
     -- Spell check plugin
@@ -129,6 +129,7 @@ return require("packer").startup(function()
     -- LSP
     use {
         "neovim/nvim-lspconfig",
+        "glepnir/lspsaga.nvim",
         "williamboman/nvim-lsp-installer",
     }
 
@@ -137,8 +138,21 @@ return require("packer").startup(function()
 
     -- Telescope
     use {
-      'nvim-telescope/telescope.nvim',
-      requires = { {'nvim-lua/plenary.nvim'} }
+        'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    -- Lua
+    use {
+        "folke/trouble.nvim",
+        requires = "kyazdani42/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
     }
 
     -- Automatically set up your configuration after cloning packer.nvim

@@ -1,5 +1,5 @@
 local cmd = vim.cmd
-local opt = vim.opt
+local opt = vim.opt -- like :set
 local g = vim.g
 
 -- Stark highlighting is enough to see the current match; don"t need the
@@ -29,9 +29,11 @@ opt.number = true
 
 -- Auto load file if it was changed
 opt.autoread = true
-opt.tabstop = 4 
+opt.tabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
+
+g.indentLine_char = '▏'
 
 -- Make copy to clipboard
 opt.clipboard = "unnamedplus"
@@ -59,10 +61,15 @@ opt.swapfile = false
 opt.expandtab = true
 
 -- Indent by 4 spaces when using >>, <<, == etc.
-opt.shiftwidth = 4
-
+-- opt.shiftwidth = 4
 -- Indent by 4 spaces when pressing <TAB>
-opt.softtabstop = 4
+-- opt.softtabstop = 4
+-- Keep indentation from previous line
+vim.o.autoindent = true
+-- Automatically inserts indentation in some cases
+vim.o.smartindent = true
+-- Like smart indent, but stricter and more customisable
+vim.o.cindent = true
 
 -- Persist undo between sessions
 opt.undofile = true
@@ -74,18 +81,10 @@ opt.tw = 120
 opt.termguicolors = true
 opt.colorcolumn = ""
 
--- Keep indentation from previous line
-opt.autoindent = true
-
--- Automatically inserts indentation in some cases
-opt.smartindent = true
-
 -- Search by using lower and upper case
 opt.ignorecase = true
 opt.smartcase = true
 
--- Like smart indent, but stricter and more customisable
-opt.cindent = true
 
 -- Search down into sub folders Provides tab-completion
 opt.path = opt.path + ".,**"
@@ -116,7 +115,7 @@ opt.showbreak = "⤥"
 
 -- Automatic, language-dependent indentation, syntax coloring and other
 -- functionality.
-cmd("filetype indent plugin on")
+-- cmd("filetype indent plugin on")
 cmd("syntax on")
 
 

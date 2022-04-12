@@ -17,8 +17,8 @@ map('n', '<Leader>S' ,':nohlsearch<CR>', default_opts)
 map('n', '<Leader><Leader>f', 'zM<CR>', default_opts)
 map('n', '<Leader><Leader>r', 'zR<CR>', default_opts)
 
---  Rg search 
-map('n', '<Leader>/', ':Rg<CR>\'', default_opts)
+--  Rg search
+-- map('n', '<Leader>/', ':Rg<CR>\'', default_opts)
 map('n', '<Leader><Leader>/', ':Ag<CR>\'', default_opts)
 
 --  Splits movements
@@ -26,6 +26,20 @@ map('n', '<C-J>', '<C-W><C-J>', default_opts)
 map('n', '<C-K>', '<C-W><C-K>', default_opts)
 map('n', '<C-L>', '<C-W><C-L>', default_opts)
 map('n', '<C-H>', '<C-W><C-H>', default_opts)
+
+-- Keep cursor on the middle of the screen when go to the next search item
+map('n', 'n', 'nzzzv', default_opts)
+map('n', 'N', 'Nzzzv', default_opts)
+map('n', 'J', 'mzJ`z', default_opts)
+
+-- Yank to the end
+map('n', 'Y', 'y$', default_opts)
+
+-- Resize the split window
+map('n', '<C-S-Left>', ':vertical resize +10<CR>', default_opts)
+map('n', '<C-S-Right>', ':vertical resize -10<CR>', default_opts)
+map('n', '<C-S-Up>', ':resize +10<CR>', default_opts)
+map('n', '<C-S-Down>', ':resize -10<CR>', default_opts)
 
 --  Copy paste form PRIMARY and CLIPBOARD
 map('n', '<Leader>y', '"*y', default_opts)
@@ -81,9 +95,6 @@ map('', '<Leader>\'', 'ysiw\'<CR>', default_opts)
 -- Emulate commands combinations ci' and di' using cq and dq.
 -- onoremap q i'
 -- onoremap Q i"
-
---  Keep the cursor in place while joining lines
-map('n', 'J', 'mzJ`z', default_opts)
 
 --  Re-save file sith sudo
 map('c', 'w!!', 'execute \'silent! write !sudo tee % >/dev/null\' <bar> edit!', default_opts)

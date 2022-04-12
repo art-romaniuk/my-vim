@@ -2,6 +2,9 @@ vim.cmd([[
   autocmd Filetype html setlocal ts=4 sw=4 expandtab
   autocmd Filetype scss setlocal ts=2 sw=2 expandtab
   autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 noexpandtab
+  autocmd FileType php setlocal autoindent
+  autocmd BufReadPost * setlocal autoindent
+  autocmd Filetype indent on
 ]])
 
 -- Disable auto-comments
@@ -27,4 +30,5 @@ vim.cmd([[
 vim.cmd([[
   au BufNewFile,BufRead *.ts setlocal filetype = typescript
   au BufNewFile,BufRead *.tsx setlocal filetype = typescript.tsx
+  au Filetype *.php set smartindent
 ]])
