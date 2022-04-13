@@ -42,7 +42,6 @@ opt.confirm = true
 -- Enable mouse in normal and visual modes
 opt.mouse = "nv"
 
--- Highlight search word
 opt.relativenumber = true
 
 -- Be iMproved, required
@@ -169,7 +168,7 @@ vim.cmd([[
 -- Redecalre style for hlsearch (it"s an old values)
 -- autocmd VimEnter * hi Search guifg=#Cd3f45 guibg=green gui=underline,bold
 vim.cmd([[
-  autocmd VimEnter * hi Search gui=underline,bold
+  autocmd VimEnter * hi Search gui=underline,bold guibg=peru
 ]])
 
 -- -- JavaScript
