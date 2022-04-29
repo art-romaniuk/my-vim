@@ -170,10 +170,6 @@ nnoremap ]m :action MethodDown<cr>
 nnoremap [c :action VcsShowPrevChangeMarker<cr>
 nnoremap ]c :action VcsShowNextChangeMarker<cr>
 
-
-" built-in navigation to navigated items works better
-nnoremap <c-o> :action Back<cr>
-nnoremap <c-i> :action Forward<cr>
 " but preserve ideavim defaults
 nnoremap g<c-o> <c-o>
 nnoremap g<c-i> <c-i>
