@@ -5,3 +5,5 @@ disabled = false
 [php]
 disabled = false
 
+[cmd_duration]
+min_time = 1
