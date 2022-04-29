@@ -155,6 +155,8 @@ return require("packer").startup(function()
         end
     }
 
+    use "Yggdroot/indentLine"
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
