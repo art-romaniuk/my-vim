@@ -7,3 +7,8 @@ disabled = false
 
 [cmd_duration]
 min_time = 1
+
+[git_status]
+untracked = "[?](red)"
+staged = "[+](#98C379)"
+modified = "[!](#61AFEF)"
