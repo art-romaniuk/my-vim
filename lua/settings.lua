@@ -1,6 +1,6 @@
 local cmd = vim.cmd
 local opt = vim.opt -- like :set
-local g = vim.g
+local g = vim.g -- like let
 
 -- Stark highlighting is enough to see the current match; don"t need the
 -- centering, which can be annoying.
