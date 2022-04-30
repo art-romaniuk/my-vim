@@ -1,7 +1,5 @@
 local let = vim.g
 
--- let.ale_sign_error = '✘'
--- let.ale_sign_warning = '⚠'
 vim.cmd([[
     let g:ale_sign_error = '✗'
     let g:ale_sign_warning = '⚠'
