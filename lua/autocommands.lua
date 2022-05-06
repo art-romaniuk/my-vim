@@ -28,7 +28,5 @@ vim.cmd([[
 
 -- Set type for typescript files
 vim.cmd([[
-  au BufNewFile,BufRead *.ts setlocal filetype = typescript
-  au BufNewFile,BufRead *.tsx setlocal filetype = typescript.tsx
   au Filetype *.php set smartindent
 ]])

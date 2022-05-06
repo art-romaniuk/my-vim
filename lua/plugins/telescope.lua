@@ -19,6 +19,6 @@ require('telescope').setup({
 })
 
 -- map('n', '<Leader>.', ':Telescope buffers<CR>', default_opts)
-map('n', '<Leader>t', ':Telescope find_files find_command=rg,--ignore,--hidden,--files <CR>', default_opts)
+-- map('n', '<Leader>t', ':Telescope find_files find_command=rg,--ignore,--hidden,--files <CR>', default_opts)
 -- map('n', '<Leader>H', ':Telescope help_tags<CR>', default_opts)
 map('n', '<Leader>/', ':Telescope live_grep<CR>', default_opts)
