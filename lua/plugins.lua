@@ -7,7 +7,7 @@ vim.cmd("packadd packer.nvim")
 
 return require("packer").startup(function()
     -- ALE (Asynchronous Lint Engine)
-    use "w0rp/ale"
+    use "dense-analysis/ale"
 
     -- Color scheme
     use "rainglow/vim"
@@ -23,9 +23,6 @@ return require("packer").startup(function()
 
     -- For refactoring
     -- use "phpactor/phpactor", {"for": "php", "branch": "master", "do": "composer install --no-dev -o"}
-
-    -- A collection of language packs for Vim.
-    use "sheerun/vim-polyglot"
 
     -- Terminal inside vim
     use "voldikss/vim-floaterm"
@@ -123,7 +120,10 @@ return require("packer").startup(function()
         "hrsh7th/cmp-path",
         "hrsh7th/cmp-cmdline",
         "hrsh7th/nvim-cmp",
+        "hrsh7th/vim-vsnip",
+        "hrsh7th/vim-vsnip-integ",
         "saadparwaiz1/cmp_luasnip", -- snippet completions
+        "windwp/nvim-autopairs",
     }
 
     -- LSP
@@ -131,6 +131,7 @@ return require("packer").startup(function()
         "neovim/nvim-lspconfig",
         "glepnir/lspsaga.nvim",
         "williamboman/nvim-lsp-installer",
+        "onsails/lspkind-nvim"
     }
 
     -- Find and replace
