@@ -8,8 +8,8 @@ vim.cmd([[
   nmap <Leader>f <Plug>(easymotion-overwin-f)
   map  <Leader>l <Plug>(easymotion-bd-jk)
   nmap <Leader>l <Plug>(easymotion-overwin-line)
-  map  <Leader>; <Plug>(easymotion-bd-w)
-  nmap <Leader>; <Plug>(easymotion-overwin-w)
+  " map  <Leader>; <Plug>(easymotion-bd-w)
+  " nmap <Leader>; <Plug>(easymotion-overwin-w)
 ]])
 
 vim.cmd([[
