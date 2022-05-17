@@ -24,7 +24,6 @@ map('i', '<c-x><c-l>', '<plug>(fzf-complete-buffer-line)', {})
 
 -- Save search history
 g.fzf_history_dir = '~/.local/share/fzf-history'
-g.fzf_preview_window = {'down:80%', 'ctrl-/'}
 
 g.fzf_layout = { window = { width = 0.9, height = 0.9 } }
 
