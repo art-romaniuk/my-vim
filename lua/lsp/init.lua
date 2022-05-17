@@ -13,7 +13,7 @@ vim.cmd([[
   nnoremap <silent> <C-p> <cmd>Lspsaga diagnostic_jump_prev<CR>
   nnoremap <silent> <C-n> <cmd>Lspsaga diagnostic_jump_next<CR>
   nnoremap <silent> gf    <cmd>lua vim.lsp.buf.formatting()<CR>
-  nnoremap <silent> gn    <cmd>lua vim.lsp.buf.rename()<CR>
+  nnoremap <silent> gR    <cmd>lua vim.lsp.buf.rename()<CR>
   nnoremap <silent> ga    <cmd>Lspsaga code_action<CR>
   xnoremap <silent> ga    <cmd>Lspsaga range_code_action<CR>
   nnoremap <silent> gs    <cmd>Lspsaga signature_help<CR>
