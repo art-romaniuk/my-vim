@@ -147,6 +147,12 @@ return require("packer").startup(function()
 
     use "mkitt/tabline.vim.git"
 
+    -- Debugin plugin
+    use "puremourning/vimspector"
+
+    -- Plugin for helm
+    use 'towolf/vim-helm'
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
