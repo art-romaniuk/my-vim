@@ -27,9 +27,6 @@ return require("packer").startup(function()
     -- Terminal inside vim
     use "voldikss/vim-floaterm"
 
-    -- Neerd Tree
-    use "preservim/nerdtree"
-
     -- Marks changed files
     use "Xuyuanp/nerdtree-git-plugin"
 
@@ -113,27 +110,29 @@ return require("packer").startup(function()
     -- Markdown preview
     use { "iamcco/markdown-preview.nvim", run = "cd app && yarn install"  }
 
-    -- cmp plugins
-    use {
-        "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/cmp-buffer",
-        "hrsh7th/cmp-path",
-        "hrsh7th/cmp-cmdline",
-        "hrsh7th/nvim-cmp",
-        "hrsh7th/vim-vsnip",
-        "hrsh7th/vim-vsnip-integ",
-        "saadparwaiz1/cmp_luasnip", -- snippet completions
-        "windwp/nvim-autopairs",
-    }
+    use {'neoclide/coc.nvim', branch = 'release'}
 
-    -- LSP
-    use {
-        "neovim/nvim-lspconfig",
-        "glepnir/lspsaga.nvim",
-        "williamboman/nvim-lsp-installer",
-        "onsails/lspkind-nvim"
-    }
-
+    -- -- cmp plugins
+    -- use {
+    --     "hrsh7th/cmp-nvim-lsp",
+    --     "hrsh7th/cmp-buffer",
+    --     "hrsh7th/cmp-path",
+    --     "hrsh7th/cmp-cmdline",
+    --     "hrsh7th/nvim-cmp",
+    --     "hrsh7th/vim-vsnip",
+    --     "hrsh7th/vim-vsnip-integ",
+    --     "saadparwaiz1/cmp_luasnip", -- snippet completions
+    --     "windwp/nvim-autopairs",
+    -- }
+    --
+    -- -- LSP
+    -- use {
+    --     "neovim/nvim-lspconfig",
+    --     "glepnir/lspsaga.nvim",
+    --     "williamboman/nvim-lsp-installer",
+    --     "onsails/lspkind-nvim"
+    -- }
+    --
     -- Find and replace
     use "dyng/ctrlsf.vim"
 
