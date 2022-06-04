@@ -80,7 +80,7 @@ return require("packer").startup(function()
     use { "fatih/vim-go",  run = ":GoUpdateBinaries" }
 
     -- Track the engine.
-    use "SirVer/ultisnips"
+    -- use "SirVer/ultisnips"
     -- Snippets are separated from the engine. Add this if you want them:
     use "honza/vim-snippets"
 
