@@ -21,7 +21,8 @@ opt.shell = "/usr/local/bin/fish"
 -- autocmd vimenter * colorscheme palenight
 -- autocmd vimenter * colorscheme onehalfdark
 -- autocmd vimenter * colorscheme dracula
-cmd("colorscheme onedark")
+-- cmd("colorscheme onedark")
+cmd("colorscheme OceanicNext")
 -- opt.background = dark
 
 -- Display line numbers
@@ -130,13 +131,13 @@ cmd("syntax on")
 -- let &t_EI .= "\<Esc>[1 q"
 
 -- -- Folding
--- if has("folding")
---     if has("windows")
---         let &fillchars="vert: "         -- less cluttered vertical window separators
---     endif
---     opt.foldmethod=indent               -- not as cool as syntax, but faster
---     opt.foldlevelstart=99               -- start unfolded
--- endif
+if vim.fn.has("folding") then
+    if vim.fn.has("windows") then
+        cmd("let &fillchars=\"vert: \"")
+    end
+    vim.opt.foldmethod = 'indent'               -- not as cool as syntax, but faster
+    vim.opt.foldlevelstart = 100
+end
 
 -- if v:version > 703 || v:version == 703 && has("patch541")
 --     opt.formatoptions+=j                -- remove comment leader when joining comment lines
