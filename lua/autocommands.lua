@@ -1,7 +1,7 @@
 vim.cmd([[
-  autocmd Filetype html setlocal ts=4 sw=4 expandtab
-  autocmd Filetype scss setlocal ts=2 sw=2 expandtab
-  autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 noexpandtab
+  autocmd Filetype html setlocal autoindent
+  autocmd Filetype scss setlocal autoindent
+  autocmd Filetype javascript setlocal autoindent
   autocmd FileType php setlocal autoindent
   autocmd BufReadPost * setlocal autoindent
   autocmd Filetype indent on
