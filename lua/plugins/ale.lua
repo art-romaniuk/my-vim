@@ -7,7 +7,6 @@ vim.cmd([[
     let g:ale_sign_style_warning = '⚠'
     let g:ale_sign_info = 'ℹ'
     let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
-    let g:ale_javascript_prettier_options = '--single-quote --trailing-comma all'
 
     highlight link ALEWarning       Normal
     highlight link ALEWarningSign      Search
