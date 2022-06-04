@@ -17,6 +17,7 @@ return require("packer").startup(function()
     -- Color scheme
     -- use "joshdick/onedark.vim"
     use "ii14/onedark.nvim"
+    use 'mhartington/oceanic-next'
 
     -- EasyMotion
     use "easymotion/vim-easymotion"
@@ -26,6 +27,9 @@ return require("packer").startup(function()
 
     -- Terminal inside vim
     use "voldikss/vim-floaterm"
+
+    -- File explorer
+    use "preservim/nerdtree"
 
     -- Marks changed files
     use "Xuyuanp/nerdtree-git-plugin"
@@ -112,27 +116,6 @@ return require("packer").startup(function()
 
     use {'neoclide/coc.nvim', branch = 'release'}
 
-    -- -- cmp plugins
-    -- use {
-    --     "hrsh7th/cmp-nvim-lsp",
-    --     "hrsh7th/cmp-buffer",
-    --     "hrsh7th/cmp-path",
-    --     "hrsh7th/cmp-cmdline",
-    --     "hrsh7th/nvim-cmp",
-    --     "hrsh7th/vim-vsnip",
-    --     "hrsh7th/vim-vsnip-integ",
-    --     "saadparwaiz1/cmp_luasnip", -- snippet completions
-    --     "windwp/nvim-autopairs",
-    -- }
-    --
-    -- -- LSP
-    -- use {
-    --     "neovim/nvim-lspconfig",
-    --     "glepnir/lspsaga.nvim",
-    --     "williamboman/nvim-lsp-installer",
-    --     "onsails/lspkind-nvim"
-    -- }
-    --
     -- Find and replace
     use "dyng/ctrlsf.vim"
 
@@ -143,8 +126,6 @@ return require("packer").startup(function()
     }
 
     use "Yggdroot/indentLine"
-
-    use "mkitt/tabline.vim.git"
 
     -- Debugin plugin
     use "puremourning/vimspector"

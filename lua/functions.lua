@@ -8,18 +8,3 @@ vim.cmd([[
 vim.cmd([[
     call NERDTreeHighlightFile('jade', 'green', 'none', 'green', 'NONE')
 ]])
-vim.cmd([[
-    call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', 'NONE')
-    call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', 'NONE')
-    call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', 'NONE')
-    call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', 'NONE')
-    call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', 'NONE')
-    call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', 'NONE')
-    call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', 'NONE')
-    call NERDTreeHighlightFile('style', 'cyan', 'none', 'cyan', 'NONE')
-    call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', 'NONE')
-    call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', 'NONE')
-    call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', 'NONE')
-    call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', 'NONE')
-]])
-
