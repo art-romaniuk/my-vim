@@ -28,12 +28,6 @@ cmd("colorscheme OceanicNext")
 -- Display line numbers
 opt.number = true
 
--- Auto load file if it was changed
-opt.autoread = true
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.expandtab = true
-
 g.indentLine_char = '▏'
 
 -- Make copy to clipboard
@@ -59,17 +53,12 @@ opt.swapfile = false
 
 -- Use soft tab stop spaces instead of tab characters for indentation
 opt.expandtab = true
-
 -- Indent by 4 spaces when using >>, <<, == etc.
--- opt.shiftwidth = 4
+opt.shiftwidth = 2
 -- Indent by 4 spaces when pressing <TAB>
--- opt.softtabstop = 4
+opt.softtabstop = 2
 -- Keep indentation from previous line
 vim.o.autoindent = true
--- Automatically inserts indentation in some cases
-vim.o.smartindent = true
--- Like smart indent, but stricter and more customisable
-vim.o.cindent = true
 
 -- Persist undo between sessions
 opt.undofile = true
