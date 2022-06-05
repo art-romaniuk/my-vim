@@ -56,7 +56,7 @@ return require("packer").startup(function()
     use "tpope/vim-surround"
 
     -- Commentary
-    use "tomtom/tcomment_vim"
+    use 'b3nj5m1n/kommentary'
 
     -- Fugitive (GIT)
     use "tpope/vim-fugitive"
