@@ -8,6 +8,7 @@ require("functions")
 
 require("coc")
 
+require("plugins/indent_line")
 require("plugins/neerd_tree")
 require("plugins/fzf")
 require("plugins/easy_motion")
@@ -21,5 +22,4 @@ require("plugins/treesitter")
 require("plugins/gopls")
 require("plugins/ale")
 require("plugins/tabline")
-require("plugins/indent_line")
 require("plugins/commentary")
