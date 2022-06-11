@@ -30,6 +30,7 @@ return require("packer").startup(function()
 
     -- File explorer
     use "preservim/nerdtree"
+    use "ryanoasis/vim-devicons"
 
     -- Marks changed files
     use "Xuyuanp/nerdtree-git-plugin"
