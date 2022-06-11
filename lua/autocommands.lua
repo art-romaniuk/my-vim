@@ -1,12 +1,17 @@
 vim.cmd([[
-  autocmd Filetype html setlocal autoindent
-  autocmd Filetype scss setlocal autoindent
-  autocmd Filetype javascript setlocal autoindent
-  autocmd FileType php setlocal autoindent
-  autocmd BufReadPost * setlocal autoindent
-  autocmd Filetype indent on
+  autocmd FileType python set omnifunc=pythoncomplete#Complete
+  autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+  autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+  autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+  autocmd FileType c set omnifunc=ccomplete#Complete
+  autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+  autocmd FileType ruby,perl,tex set shiftwidth=2
+   
+  autocmd FileType c,cpp,java,javascript,python,xml,xhtml,html,vue set shiftwidth=2 tabstop=2
+  autocmd FileType php,go set shiftwidth=4 tabstop=4
 ]])
-
 -- Disable auto-comments
 vim.cmd([[
   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
