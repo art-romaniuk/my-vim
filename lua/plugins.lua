@@ -1,4 +1,5 @@
 local fn = vim.fn
+
 local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
     packer_bootstrap = fn.system({"git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path})
@@ -128,11 +129,17 @@ return require("packer").startup(function()
 
     use "Yggdroot/indentLine"
 
-    -- Debugin plugin
+    -- Debugging plugin
     use "puremourning/vimspector"
 
     -- Plugin for helm
     use 'towolf/vim-helm'
+
+    -- Display css color
+    use 'norcalli/nvim-colorizer.lua'
+
+    -- Folding plugin
+    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
