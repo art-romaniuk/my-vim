@@ -64,6 +64,9 @@ return require("packer").startup(function()
     use "tpope/vim-fugitive"
     use "airblade/vim-gitgutter"
 
+    -- Viff diff
+    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
     -- Vim repeate
     use "tpope/vim-repeat"
 
