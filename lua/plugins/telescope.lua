@@ -58,4 +58,4 @@ map('n', '<leader>T', [[<cmd>lua require('telescope.builtin').find_files({ no_ig
 -- keymap('n', '<leader>r', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]])
 map('n', '<leader>.', [[<cmd>lua require('telescope.builtin').buffers()<CR>]], default_opts)
 map('n', '<leader>/', [[<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>]], default_opts)
-map('n', '<leader>h', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]], default_opts)
+map('n', '<leader>H', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]], default_opts)
