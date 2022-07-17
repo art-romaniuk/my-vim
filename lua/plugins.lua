@@ -19,6 +19,8 @@ return require('packer').startup(function(use)
   use {'neoclide/coc.nvim', branch = 'release'}
   use { 'antoinemadec/coc-fzf' }
 
+  use { 'pechorin/any-jump.vim' }
+
   use { 'mhartington/oceanic-next' }
 
   -- EasyMotion better analog
