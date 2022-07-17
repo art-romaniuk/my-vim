@@ -9,8 +9,8 @@ vim.cmd([[
   autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
   autocmd FileType ruby,perl,tex set shiftwidth=2
    
-  autocmd FileType c,cpp,java,javascript,python,xml,xhtml,html,vue set shiftwidth=2 tabstop=2
-  autocmd FileType php,go set shiftwidth=4 tabstop=4
+  autocmd FileType c,cpp,java,javascript,python,xml,xhtml,html,vue,yaml,yml,lua set shiftwidth=2 tabstop=2
+  autocmd FileType php,go,make set shiftwidth=4 tabstop=4
 ]])
 -- Disable auto-comments
 vim.cmd([[
@@ -34,4 +34,9 @@ vim.cmd([[
 -- Set type for typescript files
 vim.cmd([[
   au Filetype *.php set smartindent
+]])
+
+vim.cmd([[
+  autocmd InsertEnter *.json setlocal concealcursor=
+  autocmd InsertLeave *.json setlocal concealcursor=inc
 ]])

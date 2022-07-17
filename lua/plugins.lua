@@ -1,152 +1,227 @@
-local fn = vim.fn
+local packer = require 'lib.packer-init'
 
-local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then
-    packer_bootstrap = fn.system({"git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path})
-end
-vim.cmd("packadd packer.nvim")
-
-return require("packer").startup(function()
-    -- ALE (Asynchronous Lint Engine)
-    use "dense-analysis/ale"
-
-    -- Color scheme
-    use "rainglow/vim"
-
-    -- Coc vim autocompition
-    -- use {"neoclide/coc.nvim", branch = "release"}
-    -- Color scheme
-    -- use "joshdick/onedark.vim"
-    use "ii14/onedark.nvim"
-    use 'mhartington/oceanic-next'
-
-    -- EasyMotion
-    use "easymotion/vim-easymotion"
-
-    -- For refactoring
-    -- use "phpactor/phpactor", {"for": "php", "branch": "master", "do": "composer install --no-dev -o"}
-
-    -- Terminal inside vim
-    use "voldikss/vim-floaterm"
-
-    -- File explorer
-    use "preservim/nerdtree"
-    use "ryanoasis/vim-devicons"
-
-    -- Marks changed files
-    use "Xuyuanp/nerdtree-git-plugin"
-
-    -- Fzf fuzzy finder
-    use { "junegunn/fzf", run = "./install --bin", }
-    use "junegunn/fzf.vim"
-    -- Preview for coc actions
-    use "antoinemadec/coc-fzf"
-
-    -- EasyAline
-    use "junegunn/vim-easy-align"
-
-    -- -- Lualine status bar
-    use {
-        "nvim-lualine/lualine.nvim",
-        requires = { "kyazdani42/nvim-web-devicons", opt = true }
-    }
-
-    -- Autopairs
-    use "jiangmiao/auto-pairs"
-
-    -- Vim surround
-    use "tpope/vim-surround"
-
-    -- Commentary
-    use 'b3nj5m1n/kommentary'
-
-    -- Fugitive (GIT)
-    use "tpope/vim-fugitive"
-    use "airblade/vim-gitgutter"
-
-    -- Viff diff
-    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-
-    -- Vim repeate
-    use "tpope/vim-repeat"
-
-    -- Change history preview plugin
-    use "mbbill/undotree"
-
-    -- Code inspection plugin
-    use "pechorin/any-jump.vim"
-
-    -- Directory plugin
-    use "justinmk/vim-dirvish"
-
-    -- Twig plugin
-    use "lumiliet/vim-twig"
-
-    -- Yank highlight
-    use "machakann/vim-highlightedyank"
-
-    -- Go
-    use { "fatih/vim-go",  run = ":GoUpdateBinaries" }
-
-    -- Track the engine.
-    -- use "SirVer/ultisnips"
-    -- Snippets are separated from the engine. Add this if you want them:
-    use "honza/vim-snippets"
-
-    -- Extended text object
-    use "wellle/targets.vim"
-
-    -- Vim notes
-    use "vimwiki/vimwiki"
-
-    -- PlantUML
-    use "aklt/plantuml-syntax"
-    use "tyru/open-browser.vim"
-    use "weirongxu/plantuml-previewer.vim"
-
-    -- Language highlights
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate',
-        requires = {
-            { 'nvim-treesitter/nvim-treesitter-textobjects' }
-        }
-    }
-
-    -- Spell check plugin
-    use "kamykn/spelunker.vim"
-
-    -- Markdown preview
-    use { "iamcco/markdown-preview.nvim", run = "cd app && yarn install"  }
-
-    use {'neoclide/coc.nvim', branch = 'release'}
-
-    -- Find and replace
-    use "dyng/ctrlsf.vim"
-
-    -- Telescope
-    use {
-        'nvim-telescope/telescope.nvim',
-        requires = { {'nvim-lua/plenary.nvim'} }
-    }
-
-    use "Yggdroot/indentLine"
-
-    -- Debugging plugin
-    use "puremourning/vimspector"
-
-    -- Plugin for helm
-    use 'towolf/vim-helm'
-
-    -- Display css color
-    use 'norcalli/nvim-colorizer.lua'
-
-    -- Folding plugin
-    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
-
-    -- Automatically set up your configuration after cloning packer.nvim
-    -- Put this at the end after all plugins
-    if packer_bootstrap then
-        require("packer").sync()
+return require('packer').startup(function(use)
+  use {
+    'glepnir/dashboard-nvim',
+    config = function()
+      require('plugins.dashboard')
     end
+  }
+
+  use {
+    'mfussenegger/nvim-lint',
+    config = function()
+      require('plugins.nvim-lint')
+    end
+  }
+
+  -- Coc vim autocompition
+  use {'neoclide/coc.nvim', branch = 'release'}
+  use { 'antoinemadec/coc-fzf' }
+
+  use { 'mhartington/oceanic-next' }
+
+  -- EasyMotion better analog
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+    config = function()
+      require('plugins.hop')
+    end
+  }
+
+  -- Terminal inside vim
+  use { 'voldikss/vim-floaterm' }
+
+
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons',
+    },
+    config = function() 
+      require('plugins.lua-tree')
+    end
+  }
+
+  -- Fzf fuzzy finder
+  use {
+    'junegunn/fzf',
+    run = './install --bin', 
+    config = function()
+      require('plugins.fzf')
+    end
+  }
+  use { 'junegunn/fzf.vim' }
+
+  -- -- Lualine status bar
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {
+      'kyazdani42/nvim-web-devicons',
+      opt = true,
+    },
+    config = function()
+      require('plugins.lualine')
+    end
+  }
+
+  -- Personal vim configuration of Jess Archer <jess@jessarcher.com>
+  use { 'tpope/vim-commentary' }
+  use { 'tpope/vim-surround' }
+  use { 'tpope/vim-repeat' }
+  use { 'tpope/vim-eunuch' } -- Adds :Rename, :SudoWrite
+  use { 'tpope/vim-unimpaired' } -- Adds [b and other handy mappings
+  use { 'tpope/vim-sleuth' } -- Indent autodetection with editorconfig support
+  use { 'jessarcher/vim-heritage' } -- Automatically create parent dirs when saving
+
+  use {
+    'tommcdo/vim-lion',
+    config = function()
+      require('plugins.lion')
+    end
+  }
+
+  use {
+    'lukas-reineke/indent-blankline.nvim',
+    config = function()
+      require('plugins.indent-blankline')
+    end
+  }
+
+  use {
+    'AndrewRadev/splitjoin.vim',
+    config = function()
+      require('plugins.splitjoin')
+    end
+  }
+
+  use {
+    'windwp/nvim-autopairs',
+    config = function()
+      require('nvim-autopairs').setup()
+    end
+  }
+
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {
+      { 'nvim-lua/plenary.nvim' },
+      { 'kyazdani42/nvim-web-devicons' },
+      { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+      { 'nvim-telescope/telescope-live-grep-args.nvim' },
+      { 'fannheyward/telescope-coc.nvim' }
+    },
+    config = function()
+      require('plugins.telescope')
+    end
+  }
+
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    requires = {
+      'nvim-treesitter/nvim-treesitter-textobjects',
+      'lewis6991/spellsitter.nvim',
+      'JoosepAlviste/nvim-ts-context-commentstring',
+    },
+    config = function()
+      require('plugins.treesitter')
+      require('spellsitter').setup()
+    end
+  }
+
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = 'nvim-lua/plenary.nvim',
+    config = function()
+      require('gitsigns').setup { sign_priority = 20 }
+    end,
+  }
+  -- Personal vim configuration of Jess Archer <jess@jessarcher.com>
+
+  -- Fugitive (GIT)
+  use { 'tpope/vim-fugitive' }
+  -- use { 'airblade/vim-gitgutter' }
+
+  -- Viff diff
+  use {
+    'sindrets/diffview.nvim',
+    requires = 'nvim-lua/plenary.nvim'
+  }
+
+  -- Change history preview plugin
+  use {
+    'mbbill/undotree',
+    config = function()
+      require('plugins.undotree')
+    end
+  }
+
+  -- Yank highlight
+  use { 'machakann/vim-highlightedyank' }
+
+  -- Go
+  use {
+    'fatih/vim-go',
+    run = ':GoUpdateBinaries',
+    config = function()
+    require('plugins.vim-go')
+    end
+  }
+
+  -- Track the engine.
+  -- use { 'SirVer/ultisnips' }
+  -- Snippets are separated from the engine. Add this if you want them:
+  use { 'honza/vim-snippets' }
+
+  -- Extended text object
+  use { 'wellle/targets.vim' }
+
+  -- PlantUML
+  use { 'aklt/plantuml-syntax' }
+  use { 'tyru/open-browser.vim' }
+  use { 'weirongxu/plantuml-previewer.vim' }
+
+
+  -- Spell check plugin
+  use {
+    'kamykn/spelunker.vim',
+    config = function()
+      require('plugins.spelunker')
+    end
+  }
+
+  -- Markdown preview
+  use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'  }
+
+  -- Find and replace
+  use { 'dyng/ctrlsf.vim' }
+
+  -- Debugging plugin
+  use { 'puremourning/vimspector' }
+  use { 'mfussenegger/nvim-dap' }
+  use { 'rcarriga/nvim-dap-ui' }
+  use { 'theHamsta/nvim-dap-virtual-text' }
+
+  -- Plugin for helm
+  use { 'towolf/vim-helm' }
+
+  -- Display css color
+  use { 'norcalli/nvim-colorizer.lua' }
+
+  -- Folding plugin
+  use {
+    'kevinhwang91/nvim-ufo',
+    requires = 'kevinhwang91/promise-async',
+    config = function()
+      require('plugins.ufo')
+    end
+  }
+
+  -- Automatically set up your configuration after cloning packer.nvim
+  -- Put this at the end after all plugins
+  if packer_bootstrap then
+  require('packer').sync()
+  end
 end)

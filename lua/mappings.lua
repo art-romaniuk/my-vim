@@ -47,6 +47,8 @@ map('n', '<Leader>p', '"*p', default_opts)
 map('n', '<Leader>Y', '"+y', default_opts)
 map('n', '<Leader>P', '"+p', default_opts)
 
+map('n', 'cp', ':let @+ = expand("%")<CR>', default_opts)
+
 --  Change preview size
 -- nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 -- nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>

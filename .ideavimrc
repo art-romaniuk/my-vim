@@ -51,10 +51,12 @@ nnoremap \r :action ReformatCode<CR>
 
 " Open recently closed files list window
 nmap <space>. :action RecentFiles<cr>
+nmap cp :action CopyReference<cr>
 
 nnoremap <c-k> :action MoveLineUp<cr>
 nnoremap <c-j> :action MoveLineDown<cr>
 
+map gh <Action>(ShowErrorDescription)
 
 " project panel
 nnoremap <space>k :action FileStructurePopup<cr>

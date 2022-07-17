@@ -9,9 +9,9 @@ vim.g.enable_spelunker_vim = 1
 vim.cmd([[
   augroup spelunker
     autocmd!
-    autocmd BufWinEnter,BufWritePost *.vim,*.js,*.jsx,*.json,*.md call spelunker#check()
+    autocmd BufWinEnter,BufWritePost *.vim,*.js,*.jsx,*.json,*.md,*.vue call spelunker#check()
 
-    autocmd CursorHold *.vim,*.js,*.jsx,*.json,*.md call spelunker#check_displayed_words()
+    autocmd CursorHold *.vim,*.js,*.jsx,*.json,*.md,*.vue call spelunker#check_displayed_words()
   augroup END
 ]])
 

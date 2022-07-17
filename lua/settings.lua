@@ -17,10 +17,6 @@ opt.encoding = "UTF-8"
 opt.shell = "/usr/local/bin/fish"
 
 -- Colorscheme
--- autocmd vimenter * colorscheme gruvbox
--- autocmd vimenter * colorscheme palenight
--- autocmd vimenter * colorscheme onehalfdark
--- autocmd vimenter * colorscheme dracula
 -- cmd("colorscheme onedark")
 cmd("colorscheme OceanicNext")
 -- opt.background = dark
@@ -54,11 +50,11 @@ opt.swapfile = false
 -- Use soft tab stop spaces instead of tab characters for indentation
 opt.expandtab = true
 -- Indent by 4 spaces when using >>, <<, == etc.
-opt.shiftwidth = 2
+opt.shiftwidth = 4
 -- Indent by 4 spaces when pressing <TAB>
-opt.softtabstop = 2
+opt.softtabstop = 4
 -- Keep indentation from previous line
-vim.o.autoindent = true
+opt.autoindent = true
 
 -- Persist undo between sessions
 opt.undofile = true
@@ -158,7 +154,7 @@ vim.cmd([[
 -- Redecalre style for hlsearch (it"s an old values)
 -- autocmd VimEnter * hi Search guifg=#Cd3f45 guibg=green gui=underline,bold
 vim.cmd([[
-  autocmd VimEnter * hi Search gui=underline,bold guibg=peru
+  autocmd VimEnter * hi Search gui=underline,bold guibg=peru guifg=lightgrey
 ]])
 
 -- -- JavaScript
