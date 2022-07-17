@@ -12,6 +12,10 @@ vim.cmd([[
     highlight link ALEWarningSign      Search
 ]])
 
+vim.g.ale_pattern_options = {
+  ['.php'] = { ale_enabled = false },
+}
+
 vim.g["ale_fixers"] = {
     ["javascript"] = { "prettier", "eslint" },
     ["typescript"] = { "prettier", "tslint", "eslint" },
