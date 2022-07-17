@@ -8,10 +8,10 @@ return require('packer').startup(function(use)
     end
   }
 
-  use {
-    'mfussenegger/nvim-lint',
+  use { 
+    'dense-analysis/ale',
     config = function()
-      require('plugins.nvim-lint')
+      require('plugins.ale')
     end
   }
 
