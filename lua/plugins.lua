@@ -137,14 +137,13 @@ return require('packer').startup(function(use)
     'lewis6991/gitsigns.nvim',
     requires = 'nvim-lua/plenary.nvim',
     config = function()
-      require('gitsigns').setup { sign_priority = 20 }
+      require('plugins.gitsigns')
     end,
   }
   -- Personal vim configuration of Jess Archer <jess@jessarcher.com>
 
   -- Fugitive (GIT)
   use { 'tpope/vim-fugitive' }
-  -- use { 'airblade/vim-gitgutter' }
 
   -- Viff diff
   use {
