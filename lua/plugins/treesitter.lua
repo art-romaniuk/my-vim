@@ -3,12 +3,15 @@ local configs = require'nvim-treesitter.configs'
 configs.setup {
     -- One of "all", "maintained" (parsers with maintainers), or a list of languages
     ensure_installed = "all",
-
+    pyfold = {
+        enable = true,
+        custom_foldtext = true -- Sets provided foldtext on window where module is active
+    },
     -- Install languages synchronously (only applied to `ensure_installed`)
     sync_install = false,
 
     -- List of parsers to ignore installing
-    ignore_install = {},
+    ignore_install = { "phpdoc", },
 
     highlight = {
         -- `false` will disable the whole extension
@@ -52,3 +55,13 @@ configs.setup {
         },
     },
 }
+
+---WORKAROUND
+vim.api.nvim_create_autocmd({'BufEnter','BufAdd','BufNew','BufNewFile','BufWinEnter'}, {
+    group = vim.api.nvim_create_augroup('TS_FOLD_WORKAROUND', {}),
+    callback = function()
+        vim.opt.foldmethod     = 'expr'
+        vim.opt.foldexpr       = 'nvim_treesitter#foldexpr()'
+    end
+})
+---ENDWORKAROUND

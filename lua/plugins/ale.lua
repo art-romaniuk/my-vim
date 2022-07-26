@@ -39,6 +39,6 @@ vim.g["ale_fixers"] = {
     ["ansible"] = { "prettier" },
     ["puppet"] = { "puppetlint" },
     ["java"] = { "google_java_format" },
-    ["lua"] = { "lua-format", "stylua" },
+    ["lua"] = { "prettier", "lua-format", "stylua" },
 }
 vim.g["ale_fix_on_save"] = 1

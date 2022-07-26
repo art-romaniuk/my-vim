@@ -35,21 +35,42 @@ packer.startup(function(use)
   -- Terminal inside vim
   use { 'voldikss/vim-floaterm' }
 
-
   use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons',
-    },
-    config = function() 
-      require('plugins.lua-tree')
+    's1n7ax/nvim-window-picker',
+    tag = "v1.*",
+    config = function()
+      require('plugins.window-picker')
     end
   }
+  use {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+      's1n7ax/nvim-window-picker',
+    },
+    config = function ()
+      require('plugins.neo-tree')
+    end
+  }
+  -- Testing NeoTree file namager
+  -- use {
+  --   'kyazdani42/nvim-tree.lua',
+  --   requires = {
+  --     'kyazdani42/nvim-web-devicons',
+
+  --   },
+  --   config = function()
+  --     require('plugins.lua-tree')
+  --   end
+  -- }
 
   -- Fzf fuzzy finder
   use {
     'junegunn/fzf',
-    run = './install --bin', 
+    run = './install --bin',
     config = function()
       require('plugins.fzf')
     end
@@ -200,10 +221,16 @@ packer.startup(function(use)
   use { 'dyng/ctrlsf.vim' }
 
   -- Debugging plugin
-  use { 'puremourning/vimspector' }
-  use { 'mfussenegger/nvim-dap' }
-  use { 'rcarriga/nvim-dap-ui' }
-  use { 'theHamsta/nvim-dap-virtual-text' }
+  use {
+    'puremourning/vimspector',
+    config = function()
+      require('plugins.vimspector')
+    end
+  }
+  -- use { 'puremourning/vimspector' }
+  -- use { 'mfussenegger/nvim-dap' }
+  -- use { 'rcarriga/nvim-dap-ui' }
+  -- use { 'theHamsta/nvim-dap-virtual-text' }
 
   -- Plugin for helm
   use { 'towolf/vim-helm' }
@@ -212,17 +239,5 @@ packer.startup(function(use)
   use { 'norcalli/nvim-colorizer.lua' }
 
   -- Folding plugin
-  use {
-    'kevinhwang91/nvim-ufo',
-    requires = 'kevinhwang91/promise-async',
-    config = function()
-      require('plugins.ufo')
-    end
-  }
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-  require('packer').sync()
-  end
+  use {'eddiebergman/nvim-treesitter-pyfold' }
 end)

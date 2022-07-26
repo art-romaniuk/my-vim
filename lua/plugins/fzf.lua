@@ -7,7 +7,7 @@ local g = vim.g
 map('n', '<Leader>T', ':GitFiles?<CR>', default_opts)
 -- map('n', '<Leader>r', ':Tags<CR>', default_opts)
 -- Help finder
-map('n', '<Leader>H', ':Helptags!<CR>', default_opts)
+-- map('n', '<Leader>H', ':Helptags!<CR>', default_opts)
 -- Fazzy search commands
 map('n', '<Leader>C', ':Commands<CR>', default_opts)
 -- Fazzy search history

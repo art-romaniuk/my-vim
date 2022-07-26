@@ -15,14 +15,14 @@ require('gitsigns').setup {
         follow_files = true
     },
     attach_to_untracked = true,
-    current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
+    current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
     current_line_blame_opts = {
         virt_text = true,
         virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
         delay = 1000,
         ignore_whitespace = false,
     },
-    current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>',
+    current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d>, <abbrev_sha> - <summary>',
     sign_priority = 6,
     update_debounce = 100,
     status_formatter = nil, -- Use default
@@ -50,19 +50,26 @@ require('gitsigns').setup {
 
         -- Navigation
         map('n', ']c', function()
-            if vim.wo.diff then return ']c' end
-            vim.schedule(function() gs.next_hunk() end)
+            if vim.wo.diff then return ']czz' end
+            vim.schedule(function() 
+                gs.next_hunk()
+                vim.cmd([[normal! zz]])
+            end)
             return '<Ignore>'
         end, {expr=true})
 
         map('n', '[c', function()
-            if vim.wo.diff then return '[c' end
-            vim.schedule(function() gs.prev_hunk() end)
+            if vim.wo.diff then return '[czz' end
+            vim.schedule(function() 
+                gs.prev_hunk()
+                vim.cmd([[normal! zz]])
+            end)
             return '<Ignore>'
         end, {expr=true})
 
         -- Actions
         map('n', '<leader>hR', gs.reset_buffer)
+        map('n', '<leader>hr', gs.reset_hunk)
         map('n', '<leader>hp', gs.preview_hunk)
         map('n', '<leader>hb', function() gs.blame_line{full=true} end)
         map('n', '<leader>hd', gs.diffthis)
