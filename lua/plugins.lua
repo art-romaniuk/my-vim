@@ -1,6 +1,6 @@
 local packer = require 'lib.packer-init'
 
-return require('packer').startup(function(use)
+packer.startup(function(use)
   use {
     'glepnir/dashboard-nvim',
     config = function()
@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
     end
   }
 
-  use { 
+  use {
     'dense-analysis/ale',
     config = function()
       require('plugins.ale')
