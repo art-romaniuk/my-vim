@@ -32,6 +32,9 @@ map('n', 'n', 'nzzzv', default_opts)
 map('n', 'N', 'Nzzzv', default_opts)
 map('n', 'J', 'mzJ`z', default_opts)
 
+-- Keep cursor on the middle of the screen when go to the specific line
+map('n', 'gg', 'ggzz', default_opts)
+
 -- Yank to the end
 map('n', 'Y', 'y$', default_opts)
 
@@ -62,7 +65,7 @@ map('n', 'zj', 'o<ESC>k', default_opts)
 
 map('n', '<Leader>q', ':q<CR>', default_opts)
 map('n', '<Leader><Leader>q', ':qall!<CR>', default_opts)
-map('n',' <Leader><Leader>w', ':w<CR>', default_opts)
+map('n',' <Leader><Leader>w', ':wa<CR>', default_opts)
 
 -- todo Find out this map responsibility
 -- map('n', 'j', 'j:redraw<CR>', default_opts)
