@@ -58,6 +58,7 @@ opt.autoindent = true
 
 -- Persist undo between sessions
 opt.undofile = true
+opt.undodir = os.getenv("HOME") .. "/.dotfiles/undo"
 
 -- Width of wrapped texts
 opt.tw = 120

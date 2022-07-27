@@ -154,9 +154,9 @@ packer.startup(function(use)
 
   -- Change history preview plugin
   use {
-    'mbbill/undotree',
-    config = function()
-      require('plugins.undotree')
+    'simnalamburt/vim-mundo',
+    config = function ()
+      require('plugins.mundo')
     end
   }
 
