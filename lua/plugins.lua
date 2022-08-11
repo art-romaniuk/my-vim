@@ -22,6 +22,7 @@ packer.startup(function(use)
   use { 'pechorin/any-jump.vim' }
 
   use { 'mhartington/oceanic-next' }
+  use ({ 'projekt0n/github-nvim-theme' })
 
   -- EasyMotion better analog
   use {
