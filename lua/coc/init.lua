@@ -22,10 +22,9 @@ vim.cmd([[
     let col = col('.') - 1
     return !col || getline('.')[col - 1]  =~# '\s'
   endfunction
-  inoremap <silent><expr> <TAB>
-        \ pumvisible() ? coc#_select_confirm() :
-        \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-        \ <SID>check_back_space() ? "\<TAB>" :
+    inoremap <silent><expr> <TAB>
+        \ coc#pum#visible() ? coc#_select_confirm():
+        \ <SID>check_back_space() ? "\<Tab>" :
         \ coc#refresh()
   nnoremap <silent> K :call <SID>show_documentation()<CR>
   function! s:show_documentation()
