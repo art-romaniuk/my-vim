@@ -155,7 +155,7 @@ vim.cmd([[
 -- Redecalre style for hlsearch (it"s an old values)
 -- autocmd VimEnter * hi Search guifg=#Cd3f45 guibg=green gui=underline,bold
 vim.cmd([[
-  autocmd VimEnter * hi Search gui=underline,bold guibg=peru guifg=lightgrey
+  autocmd VimEnter * hi Search gui=underline,bold guibg=#2bb562 guifg=lightgrey
 ]])
 
 -- -- JavaScript
