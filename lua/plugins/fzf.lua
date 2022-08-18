@@ -26,6 +26,7 @@ map('i', '<c-x><c-l>', '<plug>(fzf-complete-buffer-line)', {})
 g.fzf_history_dir = '~/.local/share/fzf-history'
 
 g.fzf_layout = { window = { width = 0.9, height = 0.9 } }
+g.fzf_preview_window = 'down:80%'
 
 -- Allow passing an optional flags to the Rg command
 -- Example: :Rg search_text -g '*.md'

@@ -54,7 +54,7 @@ telescope.setup {
 require('telescope').load_extension 'fzf'
 
 map('n', '<leader>t', [[<cmd>lua require('telescope.builtin').find_files()<CR>]], default_opts)
-map('n', '<leader>T', [[<cmd>lua require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' })<CR>]], default_opts) -- luacheck: no max line length
+map('n', '<leader><leader>t', [[<cmd>lua require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' })<CR>]], default_opts) -- luacheck: no max line length
 -- keymap('n', '<leader>r', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]])
 map('n', '<leader>.', [[<cmd>lua require('telescope.builtin').buffers()<CR>]], default_opts)
 map('n', '<leader>/', [[<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>]], default_opts)
