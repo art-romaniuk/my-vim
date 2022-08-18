@@ -14,6 +14,7 @@ map('n', 'gu', '<Plug>(coc-references-used)')
 map('n', 'ga', '<Plug>(coc-codeaction-line)')
 map('x', 'ga', '<Plug>(coc-codeaction-line)')
 map('n', '<space><space>r', '<Plug>(coc-rename)')
+map('n', '<space><space>f', '<Plug>(coc-fix-current)')
 -- map('n', '<C-;>', '<Plug>(coc-codeaction)')
 map('n', '<space><space>a', '<Plug>(coc-codeaction)')
 
