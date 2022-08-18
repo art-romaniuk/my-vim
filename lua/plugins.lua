@@ -70,8 +70,14 @@ packer.startup(function(use)
     end
   }
 
+  use { 
+    'tpope/vim-commentary',
+    config = function()
+      require('plugins.commentary')
+    end
+  }
+
   -- Personal vim configuration of Jess Archer <jess@jessarcher.com>
-  use { 'tpope/vim-commentary' }
   use { 'tpope/vim-surround' }
   use { 'tpope/vim-repeat' }
   use { 'tpope/vim-eunuch' } -- Adds :Rename, :SudoWrite
