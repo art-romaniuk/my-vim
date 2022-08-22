@@ -11,6 +11,8 @@ vim.cmd([[
    
   autocmd FileType c,cpp,java,javascript,python,xml,xhtml,html,vue,yaml,yml,lua set shiftwidth=2 tabstop=2
   autocmd FileType php,go set shiftwidth=4 tabstop=4
+
+  autocmd BufNewFile,BufRead Dockerfile.* set syntax=dockerfile
 ]])
 -- Disable auto-comments
 vim.cmd([[
