@@ -70,11 +70,11 @@ packer.startup(function(use)
     end
   }
 
-  use { 
-    'tpope/vim-commentary',
-    config = function()
-      require('plugins.commentary')
-    end
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
   }
 
   -- Personal vim configuration of Jess Archer <jess@jessarcher.com>
