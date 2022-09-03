@@ -34,7 +34,7 @@ packer.startup(function(use)
     end
   }
 
-  use { 
+  use {
     'ThePrimeagen/harpoon',
     requires = {
       'nvim-lua/plenary.nvim'
@@ -238,4 +238,11 @@ packer.startup(function(use)
 
   -- Folding plugin
   use {'eddiebergman/nvim-treesitter-pyfold' }
+
+  use {
+    'vim-test/vim-test',
+    config =  function ()
+      require('plugins.vim-test')
+    end
+  }
 end)
