@@ -13,6 +13,7 @@ telescope.setup {
       prompt_position = 'top',
       preview_cutoff = 1,
     },
+    selection_strategy = "reset",
     sorting_strategy = 'ascending',
     mappings = {
       i = {
@@ -30,7 +31,7 @@ telescope.setup {
     buffers = {
       previewer = false,
       layout_config = {
-        width = 80,
+        width = 90,
       },
     },
     oldfiles = {
@@ -58,4 +59,4 @@ map('n', '<leader><leader>t', [[<cmd>lua require('telescope.builtin').find_files
 -- keymap('n', '<leader>r', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]])
 map('n', '<leader>.', [[<cmd>lua require('telescope.builtin').buffers()<CR>]], default_opts)
 map('n', '<leader>/', [[<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>]], default_opts)
-map('n', '<leader>H', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]], default_opts)
+map('n', '<leader><leader>h', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]], default_opts)
