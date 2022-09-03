@@ -1,7 +1,7 @@
 local map = vim.keymap.set
 
 map('n', '<leader>a', require('harpoon.mark').add_file)
-map('n', '<leader>h', require('harpoon.ui').toggle_quick_menu)
+map('n', '<leader>H', require('harpoon.ui').toggle_quick_menu)
 
 local ui = require("harpoon.ui")
 map('n', '<leader>1', function() ui.nav_file(1) end)
