@@ -22,7 +22,8 @@ packer.startup(function(use)
   use { 'pechorin/any-jump.vim' }
 
   use { 'mhartington/oceanic-next' }
-  use ({ 'projekt0n/github-nvim-theme' })
+  use { 'projekt0n/github-nvim-theme' }
+  use { 'doums/darcula' }
 
   -- EasyMotion better analog
   use {
@@ -30,6 +31,16 @@ packer.startup(function(use)
     branch = 'v2', -- optional but strongly recommended
     config = function()
       require('plugins.hop')
+    end
+  }
+
+  use { 
+    'ThePrimeagen/harpoon',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+    config = function()
+      require('plugins.harpoon')
     end
   }
 

@@ -18,8 +18,15 @@ opt.shell = "/usr/local/bin/fish"
 
 -- Colorscheme
 -- cmd("colorscheme onedark")
-cmd("colorscheme OceanicNext")
+-- cmd("colorscheme OceanicNext")
+cmd("colorscheme darcula")
+-- cmd("colorscheme onehalflight")
 -- opt.background = dark
+
+-- Fixing white text for the cursor line
+vim.cmd([[
+  hi CursorLine term=bold cterm=bold guifg=NONE
+]])
 
 -- Display line numbers
 opt.number = true
