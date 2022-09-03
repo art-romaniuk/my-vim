@@ -112,29 +112,6 @@ opt.showbreak = "⤥"
 cmd("syntax on")
 
 
--- todo Not compoeted
-
--- Change cursor color
--- use an orange cursor in insert mode
--- let &t_SI .= "\<Esc>]12;white\x7"
--- -- use a red cursor otherwise
--- let &t_EI .= "\<Esc>]12;white\x7"
--- -- Use a blinking upright bar cursor in Insert mode, a blinking block in normal
--- let &t_SI .= "\<Esc>[5 q"
--- let &t_EI .= "\<Esc>[1 q"
-
--- -- Folding
-if vim.fn.has("folding") then
-    if vim.fn.has("windows") then
-        cmd("let &fillchars=\"vert: \"")
-    end
-    vim.opt.foldmethod = 'indent'               -- not as cool as syntax, but faster
-    vim.opt.foldlevelstart = 100
-end
-
--- if v:version > 703 || v:version == 703 && has("patch541")
---     opt.formatoptions+=j                -- remove comment leader when joining comment lines
--- endif
 
 -- Auto save when lost a focus
 vim.cmd([[
