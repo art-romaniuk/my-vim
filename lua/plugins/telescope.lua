@@ -18,8 +18,8 @@ telescope.setup {
     mappings = {
       i = {
         ['<esc>'] = actions.close,
-        ['<C-k>'] = actions.cycle_history_next,
-        ['<C-j'] = actions.cycle_history_prev,
+        ['<S-j>'] = require('telescope.actions').cycle_history_next,
+        ['<S-k>'] = require('telescope.actions').cycle_history_prev,
       },
     },
     file_ignore_patterns = { '.git/' },
