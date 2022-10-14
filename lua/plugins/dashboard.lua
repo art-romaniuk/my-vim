@@ -20,8 +20,7 @@ db.custom_header = {
   '                                                       ',
 }
 
--- db.preview_command = 'bat'
--- db.preview_file_path = home .. '/.config/nvim/static/neovim.cat'
+db.session_directory = home .. '/.config/nvim/session'
 db.preview_file_height = 12
 db.preview_file_width = 80
 db.custom_center = {
@@ -62,3 +61,5 @@ db.custom_center = {
     shortcut = 'SPC f d',
   },
 }
+
+vim.api.nvim_set_keymap('n', '<Leader>S', ':SessionSave<CR>', {noremap = true, silent = true})

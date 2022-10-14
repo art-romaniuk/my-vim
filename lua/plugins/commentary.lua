@@ -1,3 +1,3 @@
 vim.cmd([[
-    autocmd FileType php setlocal commentstring=\/\/\ %s
+    autocmd FileType php,vue setlocal commentstring=\/\/\ %s
 ]])
