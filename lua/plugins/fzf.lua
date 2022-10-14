@@ -4,7 +4,7 @@ local g = vim.g
 
 -- map('n', '<Leader>.', ':Buffers<CR>', default_opts)
 -- map('n', '<Leader>t', ':Files<CR>', default_opts)
-map('n', '<Leader>T', ':GitFiles?<CR>', default_opts)
+map('n', '<Leader><Leader>T', ':GitFiles?<CR>', default_opts)
 -- map('n', '<Leader>r', ':Tags<CR>', default_opts)
 -- Help finder
 -- map('n', '<Leader>H', ':Helptags!<CR>', default_opts)
