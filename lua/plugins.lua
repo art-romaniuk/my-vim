@@ -1,6 +1,9 @@
 local packer = require 'lib.packer-init'
 
 packer.startup(function(use)
+  -- Cache for lua config
+  use 'lewis6991/impatient.nvim'
+
   use {
     'glepnir/dashboard-nvim',
     config = function()
@@ -24,6 +27,7 @@ packer.startup(function(use)
   use { 'mhartington/oceanic-next' }
   use { 'projekt0n/github-nvim-theme' }
   use { 'doums/darcula' }
+  use { '/sainnhe/sonokai' }
 
   -- EasyMotion better analog
   use {
@@ -225,10 +229,6 @@ packer.startup(function(use)
       require('plugins.vimspector')
     end
   }
-  -- use { 'puremourning/vimspector' }
-  -- use { 'mfussenegger/nvim-dap' }
-  -- use { 'rcarriga/nvim-dap-ui' }
-  -- use { 'theHamsta/nvim-dap-virtual-text' }
 
   -- Plugin for helm
   use { 'towolf/vim-helm' }
