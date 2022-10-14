@@ -9,7 +9,7 @@ vim.g.maplocalleader = "\\"
 map('n', '<Leader>]', '<C-]>', default_opts)
 
 --  Unhighlight search
-map('n', '<Leader>S' ,':nohlsearch<CR>', default_opts)
+map('n', '<Leader>H' ,':nohlsearch<CR>', default_opts)
 -- nnoremap <Leader>S :nohlsearch<Bar>:echo<CR>
 
 -- Folding
@@ -50,6 +50,9 @@ map('n', '<Leader>p', '"*p', default_opts)
 map('n', '<Leader>Y', '"+y', default_opts)
 map('n', '<Leader>P', '"+p', default_opts)
 
+-- Still hase the same copied value inside your register
+map('x', '<leader>p', '\"_dp', default_opts)
+
 map('n', 'cp', ':let @+ = expand("%")<CR>', default_opts)
 
 --  Change preview size
@@ -72,9 +75,9 @@ map('n',' <Leader><Leader>w', ':wa<CR>', default_opts)
 -- map('n', 'k', 'k:redraw<CR>', default_opts)
 
 -- Save sesson to file
-map('n', '<Leader><C-s>', ':mks! ~/.dotfiles/.vim/session/sess.vim<CR>', default_opts)
+map('n', '<Leader><C-s>', ':mks! ~/.dotfiles/vim/session/sess.vim<CR>', default_opts)
 -- Restore sesion from file
-map('n', '<Leader><C-r>', ':so ~/.dotfiles/.vim/session/sess.vim<CR>', default_opts)
+map('n', '<Leader><C-r>', ':so ~/.dotfiles/vim/session/sess.vim<CR>', default_opts)
 
 -- """""""""""""""""""""""""""""""""""""""""""
 --                Vim php-namespace          "
