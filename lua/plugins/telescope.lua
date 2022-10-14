@@ -20,6 +20,7 @@ telescope.setup {
         ['<esc>'] = actions.close,
         ['<S-j>'] = require('telescope.actions').cycle_history_next,
         ['<S-k>'] = require('telescope.actions').cycle_history_prev,
+        ['<C-q>'] = require('telescope.actions').smart_add_to_qflist + require('telescope.actions').open_qflist,
       },
     },
     file_ignore_patterns = { '.git/' },
