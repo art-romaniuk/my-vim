@@ -87,7 +87,7 @@ opt.wildmenu = true
 
 -- Spell checking
 opt.spelllang = "en"
-opt.spellfile = os.getenv("HOME") .. "/.dotfiles/.vim/spell/en.utf-8.add"
+opt.spellfile = os.getenv("HOME") .. "/.dotfiles/vim/spell/en.utf-8.add"
 
 -- Required
 cmd("filetype off")
@@ -139,7 +139,7 @@ vim.cmd([[
 -- Redecalre style for hlsearch (it"s an old values)
 -- autocmd VimEnter * hi Search guifg=#Cd3f45 guibg=green gui=underline,bold
 vim.cmd([[
-  autocmd VimEnter * hi Search gui=underline,bold guibg=#2bb562 guifg=lightgrey
+  autocmd VimEnter * hi Search gui=underline,bold guibg=#2a8c74 guifg=lightgrey
 ]])
 
 -- -- JavaScript
